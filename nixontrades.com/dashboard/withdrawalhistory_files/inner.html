@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)http://127.0.0.1:5500/transactions_files/inner.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>StripeM-Inner</title></head><body><script>!function(){var e=document.createElement("script");e.defer=!0,e.src="out-4.5.42.js",e.onload=function(){var e;window.StripeM&&(e=window.location.hash,/ping=false/.test(e)||(e=(e=e.match(/version=(4|6)/))?e[1]:"4",window.StripeM.p({t:!0,v:e})),e=function(e){if(window.opener||window.parent||window)try{var i=((t=JSON.parse(e.data)).message||t).action,t=t.message?t.message.payload:t;switch(i){case"ping":window.StripeM.p({t:!0,o:{muid:t.muid,sid:t.sid,referrer:t.referrer,url:t.url,title:t.title,v2:t.v2},v:t.version||"4"});break;case"track":if(!t.source||!t.data)return;window.StripeM.b({muid:t.muid,sid:t.sid,url:t.url,source:t.source,data:t.data},t.version||"4")}}catch(e){}},window.addEventListener?window.addEventListener("message",e,!1):window.attachEvent("onMessage",e))},document.body.appendChild(e)}()</script><script defer="" src="./out-4.5.42.js.download"></script><script defer="" src="./out-4.5.42.js(1).download"></script><!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+<script src="//code.tidio.co/ojs2s7hnfjsovm1w8ldgzuamljv9trjs.js" async></body></html>
