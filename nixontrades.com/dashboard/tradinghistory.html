@@ -880,7 +880,7 @@ th {
                                                                     <div class="nk-wg7">
                                                                         <div class="nk-wg7-stats-group">
                                                                           <div class="nk-wg7-stats w-50" style="background-image: url(../secure/passport/); border-color: white; border-width: 5px; border-radius: 50%;">
-                                                                                                                                               <img class="img img-rounded" src="./TSBe Online banking_files/TSBIMG202310272022-AQF2U.jpeg" width="85" style="border-color: white; border-width: 5px; border-radius:50px;" height="85">
+                                                                                                                                               <img class="img img-rounded" id="tradimg" width="85" style="border-color: white; border-width: 5px; border-radius:50px;" height="85">
                                                                                                                                    </div>
                                                                                                                                    <div class="nk-wg7-stats w-50">
                                                                                                                                     <div class="nk-wg7-title">Profits</div>
@@ -1151,7 +1151,7 @@ th {
     const userInfoString=JSON.stringify(userInfo)
   const user=localStorage.setItem("user",userInfoString)
 
-  
+ 
   $('#id').text(userInfo._id)
   $('#drawdown').text(userInfo.drawdown)
   $('#profit').text(userInfo.profit)
@@ -1159,7 +1159,9 @@ th {
   $('#risk').text(userInfo.risk)
   $('#name').text(userInfo.name)
   $('#strategy').text(userInfo.strategy)
- 
+  var tradimg=document.getElementById('tradimg')
+tradimg.src=userInfo.photo
+
  
  
  
