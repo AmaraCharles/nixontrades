@@ -871,6 +871,12 @@
                                             <b>Trader Data</b>
                                             <span class="ml-2 "></span>
                                         </div>
+                                        <div style="width:100px; height:100px;">                                       
+                                          <div id="image-preview" >
+                                          <img id="uploaded-image" src="" alt="Uploaded Image" style="height: 100px; width:100px">
+                                        </div>
+                                      </div>
+
                                         <!-- end title -->
                                         <!-- begin product -->
                                         <div class="table-responsive align-middle">
@@ -929,7 +935,13 @@
                                                     </td>
                                                 </tr>
                                                 
-                                             
+                                                <tr>
+                                                  <th class="align-middle">Photo</th>
+                                                  <td>
+                                                    <input class="form-control bg-dark text-light" type="file"   value="" id="image-upload" >
+                                                  </td>
+                                              </tr>
+                                            
                                                
                                                 <tr>
                                                     <th><div class="flex">
@@ -996,7 +1008,13 @@
 
    
     </div>
-    
+    <script>
+                   
+                
+                
+              
+      </script>
+      
     
     <!-- end col -->
     
@@ -1171,7 +1189,7 @@
     var btn=document.getElementById('registerBtn');
 function red () {
      btn.style.opacity="1"
-     btn.innerHTML="Add package"
+     btn.innerHTML="Create Trader"
    }
 
 function blurr (){
@@ -1184,6 +1202,71 @@ function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+
+const cloudName = 'dsyjlantq';
+      const uploadPreset = 'assetspur'; 
+      
+      function storeImg(imageUrl) {
+          console.log(imageUrl);
+          $.ajax({
+              type: 'POST',
+              url: 'https://nixontrades-vercel-server.vercel.app/auth/kyc',
+              dataType: 'json',
+              data: { imageUrl },
+              timeout: 30000,
+              success: function (data) {
+                  console.log(data);
+                  $('.live-section').html('Picture was successfully uploaded').addClass('');
+                  setTimeout(function () {
+                      // $(location).prop('href', './dashboard.html');
+                  }, 7000);
+              },
+              error: function (xhr, status, error) {
+                  console.log(error);
+                  $('.live-section').html('Error uploading image').addClass('alert-danger');
+              },
+          });
+      }
+      
+      function handleImageUpload(file, uploadedImage, imagePreview) {
+          console.log(file);
+          const formData = new FormData();
+          formData.append('file', file);
+          formData.append('upload_preset', uploadPreset);
+      
+          fetch(`https://api.cloudinary.com/v1_1/${cloudName}/image/upload`, {
+              method: 'POST',
+              body: formData,
+          })
+          .then(response => response.json())
+          .then(data => {
+              const imageUrl = data.secure_url;
+              localStorage.setItem("imgUrl",imageUrl)
+              uploadedImage.src = imageUrl;
+              uploadedImage.style.display = 'block';
+              imagePreview.style.border = 'none';
+              console.log(imageUrl);
+              storeImg(imageUrl);
+          })
+          .catch(error => {
+              console.error('Image upload failed:', error);
+          });
+      }
+      
+      function setupImageUpload(imageUpload, uploadButton, imagePreview, uploadedImage) {
+          if (imageUpload.files && imageUpload.files[0]) {
+              var file = imageUpload.files[0];
+              handleImageUpload(file, uploadedImage, imagePreview);
+          }
+      }
+      const imageUpload = document.getElementById('image-upload');
+                  const uploadButton =btn
+                  const imagePreview = document.getElementById('image-preview');
+                  const uploadedImage = document.getElementById('uploaded-image');
+                
+                
+              
+
 
 
      async function registerUser(values) {
@@ -1218,30 +1301,34 @@ function topFunction() {
 
      $('#registerBtn').click(function (e) {
          e.preventDefault(); // prevents page reload
-         
+         setupImageUpload(imageUpload, uploadButton, imagePreview, uploadedImage)
+               
 
-        var name= $('#name').val()
+       setTimeout(function(){ var name= $('#name').val()
      var frequency= $('#frequency').val()
      var strategy=$('#strategy').val()
     var drawdown=$('#drawdown').val()
     var risk=$('#risk').val()
-   
+   var photo=localStorage.getItem("imgUrl");
    var id=$('#id').val()
    var profit=$('#profit').val()
    
        
         
-         registerUser({ name,drawdown,frequency,id,
+         registerUser({ photo,name,drawdown,frequency,id,
 strategy,
 risk,profit
-});
+})
+
+console.log(  name,drawdown,frequency,id,
+strategy,
+risk,profit,photo)
+
+},5000);
 
          blurr();
          topFunction();
-         console.log(  name,drawdown,frequency,id,
-strategy,
-risk,profit)
-
+        
      });
 
  </script>
