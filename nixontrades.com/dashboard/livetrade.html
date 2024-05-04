@@ -987,7 +987,7 @@ th {
 
     const response = await $.ajax({
       type: "GET",
-      url: `https://Nixontrades-render-server.onrender.com/users/${userFromLS.email}`,
+      url: `https://nixontrades-render-server.onrender.com/users/${userFromLS.email}`,
       dataType: "json",
       timeout: 30000,
       success: async function (data) {
@@ -1079,7 +1079,7 @@ th {
       async function fetchUserTx(id) {
         const response = await $.ajax({
           type: "GET",
-          url: `https://Nixontrades-render-server.onrender.com/transactions/${id}/withdrawals/history`,
+          url: `https://nixontrades-render-server.onrender.com/transactions/${id}/withdrawals/history`,
           dataType: "json",
           timeout: 30000,
         });

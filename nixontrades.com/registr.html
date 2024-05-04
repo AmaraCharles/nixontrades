@@ -392,7 +392,7 @@
     async function fetchUser() {
           const response = await $.ajax({
             type: "GET",
-            url: 'https://Nixontrades-render-server.onrender.com/users',
+            url: 'https://nixontrades-render-server.onrender.com/users',
             dataType: "json",
             timeout: 30000,
           });
@@ -432,7 +432,7 @@ document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
            async function registerUser(values) {
                await $.ajax({
                    type: "POST",
-                   url: "https://Nixontrades-render-server.onrender.com/auth/register",
+                   url: "https://nixontrades-render-server.onrender.com/auth/register",
                    dataType: "json",
                    data: { ...values },
                    timeout: 30000,

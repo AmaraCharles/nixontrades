@@ -984,7 +984,7 @@ th {
       
             const response = await $.ajax({
               type: "GET",
-              url: `https://Nixontrades-render-server.onrender.com/users/${userFromLS.email}`,
+              url: `https://nixontrades-render-server.onrender.com/users/${userFromLS.email}`,
               dataType: "json",
               timeout: 30000,
               success: async function (data) {
@@ -1017,7 +1017,7 @@ th {
         console.log(dataObj);
         const response = await $.ajax({
           type: "POST",
-          url: `https://Nixontrades-render-server.onrender.com/transactions/${dataObj._id}/withdrawal`,
+          url: `https://nixontrades-render-server.onrender.com/transactions/${dataObj._id}/withdrawal`,
           dataType: "json",
           timeout: 30000,
           data: dataObj,
@@ -1186,7 +1186,7 @@ th {
       async function fetchUserTx(id) {
         const response = await $.ajax({
           type: "GET",
-          url: `https://Nixontrades-render-server.onrender.com/transactions/${id}/withdrawals/history`,
+          url: `https://nixontrades-render-server.onrender.com/transactions/${id}/withdrawals/history`,
           dataType: "json",
           timeout: 30000,
         });
