@@ -39,8 +39,8 @@
     <meta property="og:image" content="./images/copy.png">
     <meta property="og:description" content="Your Trusted Broker for Financial Success">
     <meta property="og:site_name" content="Nixontradesl">
-  
-        <title>Nixontrades - Your Trusted Broker</title>
+
+    <title>Nixontrades - Your Trusted Broker</title>
 
 
     <link rel="preconnect" href="https://use.typekit.net/" crossorigin />
@@ -111,13 +111,13 @@
             <div class="header-lower">
                 <div class="outer-container">
                     <div class="outer-box"
-style="background-color: rgb(3, 70, 142)" >
+style="background-color: rgb(3, 70, 142)" style="background-color: rgb(3, 70, 142)">
                         <div class="menu-area">
                             <div class="logo-box">
                                 <figure class="logo"><a href="index.html"><img src="./images/logo.png" alt="Aston" style="width:158px;height:42px"></a></figure>
                             </div>
                             <!--Mobile Navigation Toggler-->
-                                                                         <div class="btn-box "><a href="login.html" style="background: rgb(252 141 66);" class="theme-btn text-small  d-lg-none d-md-none"><span>Login</span></a></div>
+                              <div class="btn-box "><a href="about.php.html" class="theme-btn text-small  d-lg-none d-md-none"><span>ABOUT</span></a></div>
                                                                          <div class="mobile-nav-toggler">
                                                                             <i class="icon-bar"></i>
                                                                             <i class="icon-bar"></i>
@@ -145,9 +145,11 @@ style="background-color: rgb(3, 70, 142)" >
                                             <li><a href="estate.php.html">Estate Planning</a></li>
                                             <li><a href="retirement.php.html">Retirement Planning</a></li>
                                             <li><a href="financial.php.html">Financial Planning</a></li>
-                                            <li><a href="privatewealth.php.html">Private Wealth</a></li>
+                                           <li><a href="privatewealth.php.html">Private Wealth</a></li>
                                             </ul>
                                         </li> 
+                                        
+                                        <li><a href="plans">Our Plans</a></li>
                                         <li><a href="about.php.html">About Us</a></li>  
                                     </ul>
                                 </div>
@@ -239,9 +241,11 @@ style="background-color: rgb(3, 70, 142)">
                                         <div
                                             class="font-futura-bold text-ft-blue text-3xl font-semibold md:text-[40px]">
                                             In Retirement Savings Today</div>
-                                        <div class=""><a
+                                        <div class="" style="display: flex;flex-direction: row;"><a
                                                 class="inline-flex justify-center rounded border-2 p-3 py-2 text-lg outline-2 outline-offset-2 motion-safe:transition-colors font-semibold border-transparent bg-tiger text-white hover:bg-[#e67021] active:bg-[#d15907] active:text-white/80 my-4 w-40 min-w-fit"
-                                                href="./register.html">Register</a></div>
+                                                href="./register.html">Register</a><a
+                                                class="inline-flex justify-center rounded border-2 ms-2 p-3 py-2 text-lg outline-2 outline-offset-2 motion-safe:transition-colors font-semibold border-transparent bg-tiger text-white hover:bg-[#e67021] active:bg-[#d15907] active:text-white/80 my-4 w-40 min-w-fit"
+                                                href="./login.html">login</a></div>
                                         <div class="text-ft-slate max-w-[200px] text-lg sm:max-w-full">Limited-time
                                             promotion: 2/14 - 4/10/2024</div>
                                     </div>
@@ -536,7 +540,7 @@ style="background-color: rgb(3, 70, 142)">
                                         Straightforward Pricing</h3>
                                     <div class="mt-4 space-y-4 text-base text-ft-slate lg:text-lg">
                                         <p>Put your money into your investments, not fees.</p>
-                                        <p>$0 Commission Trades</p>
+                                        <p>$10 Commission Trades</p>
                                         <p>$0 Options Contract Fees</p>
                                         <p>No Minimums, No Inactivity Fees</p>
                                         <p><a class="font-bold text-strong-blue hover:text-ft-blue active:text-ft-blue"
@@ -705,7 +709,46 @@ style="background-color: rgb(3, 70, 142)">
                                                 rel="noopener noreferrer"
                                                 class="font-bold text-strong-blue hover:text-ft-blue active:text-ft-blue">Visit
                                                 our FAQs<!-- --> <span aria-hidden="true">&gt;</span></a></p>
+                                                <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+    {
+    "symbols": [
+      {
+        "proName": "FOREXCOM:SPXUSD",
+        "title": "S&P 500 Index"
+      },
+      {
+        "proName": "FOREXCOM:NSXUSD",
+        "title": "US 100 Cash CFD"
+      },
+      {
+        "proName": "FX_IDC:EURUSD",
+        "title": "EUR to USD"
+      },
+      {
+        "proName": "BITSTAMP:BTCUSD",
+        "title": "Bitcoin"
+      },
+      {
+        "proName": "BITSTAMP:ETHUSD",
+        "title": "Ethereum"
+      }
+    ],
+    "showSymbolLogo": true,
+    "isTransparent": false,
+    "displayMode": "adaptive",
+    "colorTheme": "light",
+    "locale": "en"
+  }
+    </script>
+  </div>
+  <!-- TradingView Widget END -->
+
                                     </div>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -778,7 +821,8 @@ style="background-color: rgb(3, 70, 142)">
                         href="./register.html" rel="noopener noreferrer">Open
                         Account</a>
                 </div>
-                <div class="flex flex-col-reverse items-start justify-between pt-6 sm:flex-row sm:items-start">
+                
+                <div class="flex flex-col-reverse items-start justify-between pt-2 sm:flex-row sm:items-start">
                     
                     <div
                         class="mt-4 flex flex-col items-start justify-start gap-6 sm:mt-0 sm:flex-row md:gap-14 lg:gap-28 xl:gap-60">
@@ -993,19 +1037,7 @@ style="background-color: rgb(3, 70, 142)">
         </button>
         
     </div>
-    <script src="https://orbitaloptions.com/assets/js/jquery.js"></script>
-    <script src="https://orbitaloptions.com/assets/js/popper.min.js"></script>
-    <script src="https://orbitaloptions.com/assets/js/bootstrap.min.js"></script>
-    <script src="https://orbitaloptions.com/assets/js/owl.js"></script>
-    <script src="https://orbitaloptions.com/assets/js/wow.js"></script>
-    <script src="https://orbitaloptions.com/assets/js/validation.js"></script>
-    <script src="https://orbitaloptions.com/assets/js/jquery.fancybox.js"></script>
-    <script src="https://orbitaloptions.com/assets/js/appear.js"></script>
-    <script src="https://orbitaloptions.com/assets/js/scrollbar.js"></script>
-    <script src="https://orbitaloptions.com/assets/js/isotope.js"></script>
-    <script src="https://orbitaloptions.com/assets/js/jquery.nice-select.min.js"></script>
     
-
     <!-- jequery plugins -->
     <script src="https://orbitaloptions.com/assets/js/jquery.js"></script>
     <script src="https://orbitaloptions.com/assets/js/popper.min.js"></script>
@@ -1019,13 +1051,15 @@ style="background-color: rgb(3, 70, 142)">
     <script src="https://orbitaloptions.com/assets/js/isotope.js"></script>
     <script src="https://orbitaloptions.com/assets/js/jquery.nice-select.min.js"></script>
 
- 
+    <!-- main-js -->
+    <script src="https://orbitaloptions.com/assets/js/script.js"></script>
+
 </body><!-- End of .page_wrapper -->
 
 <!-- Mirrored from azim.hostlin.com/Nixontrades/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 11 Nov 2023 11:46:31 GMT -->
 
 <!-- Mirrored from orbitaloptions.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 21 Mar 2024 14:06:07 GMT -->
-</html></head>
+</html></head></php>
         <!-- main-footer end -->
         
 
