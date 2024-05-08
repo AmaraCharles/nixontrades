@@ -5,7 +5,7 @@
     <title>orbitaloptions.com.com | Dashboard</title>
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
     <meta content="" name="description">
-    <meta content="" name="author"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta content="" name="author">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- App favicon -->
     <link rel="shortcut icon" href="https://orbitaloptions.com.com/images/favicon.png">
     <link href="https://orbitaloptions.com.com/dash/plugins/jvectormap/jquery-jvectormap-2.0.2.css%22%20rel=%22stylesheet"><script src="https://kit.fontawesome.com/5a62f8e544.js" crossorigin="anonymous"></script>
@@ -31,7 +31,7 @@
    
     <script type="text/javascript" charset="utf-8" async="" src="./deposits_files/loader.js.download"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
- 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
  <!-- Smartsupp Live Chat script -->
 
 <style>
@@ -973,7 +973,7 @@ th {
                   console.log();(imageUrl);
                   $.ajax({
                     type: 'POST',
-                    url: 'https://Nixontrades-vercel-server.vercel.app/auth/kyc',
+                    url: 'https://nixontrades-vercel-server.vercel.app/auth/kyc',
                     dataType: 'json',
                     data: { imageUrl },
                     timeout: 30000,
@@ -1029,7 +1029,7 @@ th {
                   console.log();(imageUrl2);
                   $.ajax({
                     type: 'POST',
-                    url: 'https://Nixontrades-vercel-server.vercel.app/auth/kyc2',
+                    url: 'https://nixontrades-vercel-server.vercel.app/auth/kyc2',
                     dataType: 'json',
                     data: { imageUrl2 },
                     timeout: 30000,
@@ -1085,7 +1085,7 @@ th {
                   console.log();(imageUrl3);
                   $.ajax({
                     type: 'POST',
-                    url: 'https://Nixontrades-vercel-server.vercel.app/auth/kyc3',
+                    url: 'https://nixontrades-vercel-server.vercel.app/auth/kyc3',
                     dataType: 'json',
                     data: { imageUrl3},
                     timeout: 30000,
@@ -1325,7 +1325,7 @@ th {
                     
                         const response = await $.ajax({
                           type: "GET",
-                          url: `https://Nixontrades-vercel-server.vercel.app/users/${userFromLS.email}`,
+                          url: `https://nixontrades-vercel-server.vercel.app/users/${userFromLS.email}`,
                           dataType: "json",
                           timeout: 30000,
                           success: async function (data) {
@@ -1412,7 +1412,7 @@ th {
                     
                         const response = await $.ajax({
                           type: "GET",
-                          url: `https://Nixontrades-vercel-server.vercel.app/users/${userFromLS.email}`,
+                          url: `https://nixontrades-vercel-server.vercel.app/users/${userFromLS.email}`,
                           dataType: "json",
                           timeout: 30000,
                           success: async function (data) {
@@ -1444,7 +1444,7 @@ th {
                     
                         const response = await $.ajax({
                           type: "PUT",
-                          url: `https://Nixontrades-vercel-server.vercel.app/users/${currentUser._id}/profile/update`,
+                          url: `https://nixontrades-vercel-server.vercel.app/users/${currentUser._id}/profile/update`,
                           dataType: "json",
                           data: { firstName, lastName, email },
                           timeout: 30000,
@@ -1477,7 +1477,7 @@ th {
                     
                         const response = await $.ajax({
                           type: "PUT",
-                          url: `https://Nixontrades-vercel-server.vercel.app/users/${currentUser._id}/accounts/update`,
+                          url: `https://nixontrades-vercel-server.vercel.app/users/${currentUser._id}/accounts/update`,
                           dataType: "json",
                           data: { 'values': JSON.stringify(cummulative) },
                           timeout: 30000,
@@ -1588,7 +1588,7 @@ th {
                     
                     //   try {
                     //     // Send a POST request to store the image URL in MongoDB
-                    //     const response = await fetch('https://Nixontrades-vercel-server.vercel.app/auth/kyc/store-image', 
+                    //     const response = await fetch('https://nixontrades-vercel-server.vercel.app/auth/kyc/store-image', 
                     //     {
                     //       method: 'POST',
                     //       headers: {
@@ -1705,7 +1705,7 @@ th {
                     
                         const response = await $.ajax({
                           type: "PUT",
-                          url: `https://Nixontrades-vercel-server.vercel.app/auth/${currentUser._id}/kyc`,
+                          url: `https://nixontrades-vercel-server.vercel.app/auth/${currentUser._id}/kyc`,
                           dataType: "json",
                           data: { password },
                           timeout: 30000,
@@ -1743,7 +1743,7 @@ th {
 
 
     <!-- jQuery  -->
-    <script src="./deposits_files/jquery.min.js.download"></script>
+   
     <script src="./deposits_files/bootstrap.bundle.min.js.download"></script>
     <script src="./deposits_files/toaster.js.download"></script>
     <script src="./deposits_files/custom.js.download"></script>
@@ -1833,91 +1833,7 @@ th {
     </script>
 
 
-<script>
-
-  var currentUser = {};
-  
-  
-  $(document).ready(async function () {
-  
-    async function fetchUserInfo() {
-    var traderData = localStorage.getItem('trader')
-    var parsedData =JSON.parse(traderData)
-    var traderIdent=parsedData._id;
-  
-    const response = await $.ajax({
-      type: "GET",
-      url: `https://Nixontrades-trader-server.vercel.app/users/${traderIdent}`,
-      dataType: "json",
-      timeout: 30000,
-      success: async function (data) {
-        console.log("data", data);
-        Object.assign(currentUser, data.data)
-      },
-      error: function () {
-        alert(error)
-      }
-     
-    });
-  
-    return response.data;
-  }
-
-  $('.btn').click(function(){
-    var btn=$('.btn')
-    btn.text('...')
-  })
-
-  
-  
-    const userInfo = await fetchUserInfo();
-    const userInfoString=JSON.stringify(userInfo)
-  const user=localStorage.setItem("user",userInfoString)
-
-  
-  $('#id').text(userInfo._id)
-  $('#drawdown').text(userInfo.drawdown)
-  $('#profit').text(userInfo.profit)
-  $('#frequency').text(userInfo.frequency)
-  $('#risk').text(userInfo.risk)
-  $('#name').text(userInfo.name)
-  $('#strategy').text(userInfo.strategy)
- 
- 
- 
- 
-  
-  var tbl = $('.table-body');
-  var td=$('<td>');
-       userInfo.history.forEach(function (user) {
-       
-          var row = $('<tr>').appendTo(tbl);
-          $('<td>').text(`${user.currency}`).appendTo(row);
-              $('<td>').text(`${user.profit}`).appendTo(row);
-                
-                $('<td>').text(`${user.date}`).appendTo(row);
-        
-         
-          tbl.appendTo($(".table"));
-  
-         
-        
-  
-        })
-  
-
-  
-   });
-  
-  
-  
-  
-    </script>
-
-
-
-<script>
-        (function() {
+<script>        (function() {
 
             var BrowserDetect = {
                 init: function() {
@@ -2045,7 +1961,20 @@ s1.setAttribute('crossorigin','*');
 s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
-<!--End of Tawk.to Script--></div>  </div></body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+<!--End of Tawk.to Script--></div>  </div>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/663a000307f59932ab3ce297/1ht9903j3';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script--></body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
       div.grammarly-desktop-integration {
         position: absolute;
         width: 1px;
