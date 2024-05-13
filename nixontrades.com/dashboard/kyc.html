@@ -5,11 +5,12 @@
     <title>orbitaloptions.com.com | Dashboard</title>
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
     <meta content="" name="description">
-    <meta content="" name="author">
+    <meta content="" name="author"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- App favicon -->
     <link rel="shortcut icon" href="https://orbitaloptions.com.com/images/favicon.png">
     <link href="https://orbitaloptions.com.com/dash/plugins/jvectormap/jquery-jvectormap-2.0.2.css%22%20rel=%22stylesheet"><script src="https://kit.fontawesome.com/5a62f8e544.js" crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-notify/0.2.0/js/bootstrap-notify.min.js"></script>
     <!-- App css -->
     <link href="./deposits_files/custom.css" rel="stylesheet" type="text/css">
     <link href="./deposits_files/dashboard.css" rel="stylesheet" type="text/css">
@@ -24,14 +25,12 @@
     <link href="./deposits_files/jquery.steps.css" rel="stylesheet">
     <link href="./deposits_files/mastercard.css" rel="stylesheet" type="text/css">
     <link href="./deposits_files/app.min.css" rel="stylesheet" type="text/css">
-    <link href="./deposits_files/sweetalert2.min.css" rel="stylesheet" type="text/css">
+    
     <link href="./deposits_files/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
-    <link id="skin-default" rel="stylesheet" href="./TSBe Online banking_files/theme.css">
-    <link rel="stylesheet" href="./TSBe Online banking_files/dashlite.css">
-   
     <script type="text/javascript" charset="utf-8" async="" src="./deposits_files/loader.js.download"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-qFOQ9YFAeGj1gDOuUD61g3D+tLDv3u1ECYWqT82WQoaWrOhAY+5mRMTTVsQdWutbA5FORCnkEPEgU0OF8IzGvA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   
  <!-- Smartsupp Live Chat script -->
 
 <style>
@@ -712,95 +711,158 @@ th {
     <div class="brand"><a href="https://orbitaloptions.com.com/?a=account" class="logo"><span> </span><span><img style="width:150px;" src="./deposits_files/logo.png" alt="" class="logo-lg logo-light" width="150">
                 <img src="./deposits_files/logo.png" alt="" class="logo-lg logo-dark"></span></a></div>
     <!--end logo-->
-    <div class="menu-content h-100" data-simplebar="init"><div class="simplebar-wrapper" style="margin: 0px 0px -70px;"><div class="simplebar-height-auto-observer-wrapper"><div class="simplebar-height-auto-observer"></div></div><div class="simplebar-mask"><div class="simplebar-offset" style="right: 0px; bottom: 0px;"><div class="simplebar-content-wrapper" style="height: auto; overflow: hidden;"><div class="simplebar-content" style="padding: 0px 0px 70px;">
-      <ul class="metismenu left-sidenav-menu">
-        <li class="nav-item active">
-          <a href="./dashboard.html">
-              <i class="fas fa-home"></i>
-              <p>Dashboard</p>
-          </a>
-      </li>
-      <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-briefcase" aria-hidden="true"></i>
+    <div class="menu-content h-100" data-simplebar="init"><div class="simplebar-wrapper" style="margin: 0px 0px -70px;"><div class="simplebar-height-auto-observer-wrapper"><div class="simplebar-height-auto-observer"></div></div><div class="simplebar-mask"><div class="simplebar-offset" style="right: 0px; bottom: 0px;"><div class="simplebar-content-wrapper" style="height: 100%; overflow: hidden;"><div class="simplebar-content" style="padding: 0px 0px 70px;">
+        <ul class="metismenu left-sidenav-menu">
+          <li class="nav-item active">
+            <a href="./dashboard.html">
+                <i class="fas fa-home"></i>
+                <p>Dashboard</p>
+            </a>
+        </li>
+             <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-briefcase" aria-hidden="true"></i>
 
-      Copy Trading
-      </a>
-      <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
-        <a class="dropdown-item text-light" href="./copytrading.html"> Traders</a>
-       
-        <a class="dropdown-item text-light" href="./tradinghistory.html">Trading History</a>
-        
-      </div>
-    </li>                      
-
-      <li class="nav-item d-md-none  ">
-          <a href="./deposit.html">
-              <i class="fa fa-download " aria-hidden="true"></i>
-              <p>Fund your Account</p>
-          </a>
-      </li>
-      <li class="nav-item d-md-none  ">
-          <a href="./withcheckout.html">
-              <i class="fa fa-arrow-alt-circle-up " aria-hidden="true"></i>
-              <p>Withdraw Funds</p>
-          </a>
-      </li>
-
-      <li class="nav-item dropdown ">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-briefcase" aria-hidden="true"></i>
-  
-          Transactions
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item  text-light" href="./deposits.html">Deposit history</a>
-            <a class="dropdown-item text-light" href="./withhistory.html">Withdrawal history</a>
-            <a class="dropdown-item text-light" href="./plan.html">Subscriptions</a>
-           
-          </div>
-        </li>                      
+        Copy Trading
+        </a>
+        <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item text-light" href="./copytrading.html"> Traders</a>
+         
+          <a class="dropdown-item text-light" href="./tradinghistory.html">Trading History</a>
           
-                   <li  class="nav-item">
-                       <a href="./plan.html">
-                          <i class="fa-sharp fa-solid fa-tag"></i>
-              <p>Subscribe to a Plan</p>
-          </a>
-                  </li>
-
-                    <li class="nav-item dropdown ">
-                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog" aria-hidden="true"></i>
-              
-                      Account settings
-                      </a>
-                      <div class="dropdown-menu  bg-dark" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item text-light" href="./updatepassword.html">Password settings</a>
-                         <!-- <a class="dropdown-item bg-dark" href="./withdrawalsetting.html">Withdrawal settings</a> -->
-                        <a class="dropdown-item text-light" href="./settings.html">Profile settings</a>
-                      <a class="dropdown-item text-light" href="./kyc.html">KYC</a>
-                      </div>
-                    </li>
+        </div>
+      </li>
+            
           
-                                              <li class="nav-item">
-                      <a href="./livetrade.html">
-                           <i class="fa fa-eye " aria-hidden="true"></i>
-                          <p>Watch Live Trade</p>                                </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="./referral.html">
-                         <i class="fa fa-user-plus " aria-hidden="true"></i>
-                        <p>Refer a friend</p>                                </a>
-                </li>
+        <li class="nav-item d-md-none  ">
+            <a href="./deposit.html">
+                <i class="fa fa-download " aria-hidden="true"></i>
+                <p>Fund your Account</p>
+            </a>
+        </li>
+        <li class="nav-item d-md-none  ">
+            <a href="./withcheckout.html">
+                <i class="fa fa-arrow-alt-circle-up " aria-hidden="true"></i>
+                <p>Withdraw Funds</p>
+            </a>
+        </li>
 
+            
+            <li class="nav-item dropdown ">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-briefcase" aria-hidden="true"></i>
+    
+            Transactions
+            </a>
+            <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item  text-light" href="./deposits.html">Deposit history</a>
+              <a class="dropdown-item text-light" href="./withhistory.html">Withdrawal history</a>
+              <a class="dropdown-item text-light" href="./plan.html">Subscriptions</a>
              
-      <li class="nav-item ">
-          <a href="../login.html">
-              <i class="fa fa-life-ring" aria-hidden="true"></i>
-              <p>Sign Out</p>
-          </a>
-      </li>
+            </div>
+          </li> <!-- <li><a class="nav-link" href="#"><i data-feather="trending-up"
+                        class="align-self-center menu-icon"></i><span>Trading Interface</span></a>
+            </li>-->
+           
+                     <li  class="nav-item">
+                         <a href="./plan.html">
+                            <i class="fa-sharp fa-solid fa-tag"></i>
+                <p>Subscribe to a Plan</p>
+            </a>
+                    </li>
+
+                      <li class="nav-item dropdown ">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog" aria-hidden="true"></i>
+                
+                        Account settings
+                        </a>
+                        <div class="dropdown-menu  bg-dark" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item text-light" href="./updatepassword.html">Password settings</a>
+                           <!-- <a class="dropdown-item bg-dark" href="./withdrawalsetting.html">Withdrawal settings</a> -->
+                          <a class="dropdown-item text-light" href="./settings.html">Profile settings</a>
+                        <a class="dropdown-item text-light" href="./kyc.html">KYC</a>
+                        </div>
+                      </li>
+            
+                                              <li class="nav-item">
+                        <a href="./livetrade.html">
+                             <i class="fa fa-eye " aria-hidden="true"></i>
+                            <p>Watch Live Trade</p>                                </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="./referral.html">
+                           <i class="fa fa-user-plus " aria-hidden="true"></i>
+                          <p>Refer a friend</p>                                </a>
+                  </li>
+
+               
+        <li class="nav-item ">
+            <a href="../login.html">
+                <i class="fa fa-life-ring" aria-hidden="true"></i>
+                <p>Sign Out</p>
+            </a>
+        </li>
             
     </ul></div></div></div></div><div class="simplebar-placeholder" style="width: auto; height: 524px;"></div></div><div class="simplebar-track simplebar-horizontal" style="visibility: hidden;"><div class="simplebar-scrollbar" style="width: 0px; display: none;"></div></div><div class="simplebar-track simplebar-vertical" style="visibility: hidden;"><div class="simplebar-scrollbar" style="height: 0px; display: none;"></div></div></div>
 </div><!-- end left-sidenav-->
+<style>
+  
+  #image-preview {
+    max-width: 100%;
+    max-height: 300px;
+    margin: 20px auto;
+    /* border: 2px dashed #ccc; */
+    padding: 10px;
+    box-sizing: border-box;
+  }
 
+  #image-preview img {
+    max-width: 100%;
+    max-height: 100%;
+    display: none;
+  }
+
+  #image-preview2 {
+    max-width: 100%;
+    max-height: 300px;
+    margin: 20px auto;
+    /* border: 2px dashed #ccc; */
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  #image-preview2 img {
+    max-width: 100%;
+    max-height: 100%;
+    display: none;
+  }
+
+  #image-preview3 {
+    max-width: 100%;
+    max-height: 300px;
+    margin: 20px auto;
+    /* border: 2px dashed #ccc; */
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  #image-preview3 img {
+    max-width: 100%;
+    max-height: 100%;
+    display: none;
+  }
+
+
+  #upload-button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+  #upload-button:hover {
+    background-color: #0056b3;
+  }
+</style>
     <div class="page-wrapper">
 
         <!-- Top Bar Start -->
@@ -839,7 +901,7 @@ th {
                                 <h4 class="page-title">Dashboard</h4>
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="javascript:void(0);">orbitaloptions.com.com</a></li>
-                                    <li class="breadcrumb-item active">Your Deposits</li>
+                                    <li class="breadcrumb-item active">Settings</li>
                                 </ol>
                             </div>
                             <div class="col-auto align-self-center"><a href="https://orbitaloptions.com.com/?a=deposit_list#" class="btn btn-sm btn-outline-primary" id="Dash_Date"><span class="day-name" id="Day_Name">Today:</span>&nbsp; <span class="" id="Select_date">Mar 10</span> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar align-self-center icon-xs ml-1"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
@@ -853,23 +915,21 @@ th {
                 <div class="col-sm-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title">KYC</h4>
+                            <h4 class="card-title">Personal Data Form</h4>
                             
                         </div>
                         <div class="card-body"> 
 
-
-
-                         
-                            <div class="row profile">
+                            <div class="tab-pane fade show active" id="per">
+                              <div class="row profile">
                                 <div class="p-2 col-md-12">
-                                    <div class="card p-md-5 p-1 shadow-lg bg-dark">
+                                    <div class="card p-md-5 p-1 shadow-lg">
                                       <div class="approved" id="approved" style="display: none;">
                                         <h1><img src="tick.png" alt="" height="150" width="150" ></h1>
                                         <p><h1 style="color: white;">Account Verified!</h1></p>
                                        
                                       </div>
-                                      <div id="strongWrapper" class="strongWrapper" style="display: none;" >
+                                      <div id="strongWrapper" class="strongWrapper" style="display:block;" >
                                        
                                         <ul class="nav nav-pills">
                                             <li class="nav-item">
@@ -907,19 +967,19 @@ th {
                    <!-- <h2>Kindly switch to Desktop to complete this process.</h2> -->
                   
                     <div class="form-group col-md-6">
-                    <h5 class="text-light">Upload ID-Front</h5>
-                    <input class="form-control bg-dark text-light" type="file"   value="" id="image-upload" >
+                    <h5 class="text-dark">Upload ID-Front</h5>
+                    <input class="form-control  text-dark" style="background-color: #f5f5f5;" type="file"   value="" id="image-upload" >
                   </div>
                   <div class="form-group col-md-6">
-                    <h5 class="text-light">Upload ID-Back</h5>
-                    <input type="file" class="form-control bg-dark text-light"  value="" id="image-upload2" >
+                    <h5 class="text-dark">Upload ID-Back</h5>
+                    <input type="file" class="form-control  text-dark" style="background-color: #f5f5f5;" value="" id="image-upload2" >
                   </div>
                   <div class="form-group col-md-6">
-                  <h5 class="text-light">Upload Selfie</h5>
-                  <input type="file" class="form-control bg-dark text-light"  value="" id="image-upload3" >
+                  <h5 class="text-dark">Upload Selfie</h5>
+                  <input type="file" class="form-control  text-dark" style="background-color: #f5f5f5;" value="" id="image-upload3" >
                   </div>
                   <div class="form-group col-md-6">
-                    <h5 class="text-light">Type of ID</h5>
+                    <h5 class="text-dark">Type of ID</h5>
                    <select class="form-control">
                   <option>Driver's license</option>
                   <option>SSN</option>
@@ -931,819 +991,50 @@ th {
                    </select>
                   </div>
                   <div class="form-group col-md-6">
-                    <h5 class="text-light">ID Number</h5>
-                    <input type="text" class="form-control bg-dark text-light" value="" placeholder="Enter number on ID" name="phone">
+                    <h5 class="text-dark">ID Number</h5>
+                    <input type="text" class="form-control  text-dark"style="background-color: #f5f5f5;" value="" placeholder="Enter number on ID" name="phone">
                   </div>
                   
                   <div class="form-group col-md-6">
-                    <h5 class="text-light">Expiry Date</h5>
-                    <input type="date"   class="form-control">
+                    <h5 class="text-dark">Expiry Date</h5>
+                    <input type="date"   class="form-control trxt-dark">
                   </div>
                   <div class="form-group col-md-6">
-                    <h5 class="text-light">Address</h5>
-                    <input type="text" class="form-control bg-dark text-light" value="" placeholder="Enter address" name="phone">
+                    <h5 class="text-dark">Address</h5>
+                    <input type="text" class="form-control  text-dark"style="background-color: #f5f5f5;" value="" placeholder="Enter address" name="phone">
                   </div>
                   <div class="form-group col-md-6">
-                    <h5 class="text-light">Post code</h5>
-                    <input type="number" class="form-control bg-dark text-light" value="" placeholder="Enter postcode" >
+                    <h5 class="text-dark">Post code</h5>
+                    <input type="number" class="form-control  text-dark" style="background-color: #f5f5f5;" value="" placeholder="Enter postcode" >
                   </div>
                   
                   <div class="form-group col-md-6">
-                    <h5 class="text-light">City</h5>
-                    <input type="text" class="form-control bg-dark text-light" value="" placeholder="Enter city" >
+                    <h5 class="text-dark">City</h5>
+                    <input type="text" class="form-control  text-dark" style="background-color: #f5f5f5;" value="" placeholder="Enter city" >
                   </div>
                   <div class="form-group col-md-6">
-                    <h5 class="text-light">State</h5>
-                    <input type="text" class="form-control bg-dark text-light" value="" placeholder="Enter State" >
+                    <h5 class="text-dark">State</h5>
+                    <input type="text" class="form-control  text-dark"  value="" placeholder="Enter State" >
                   </div>
                   
                   </div>
                   <button type="submit" class="btn btn-primary" id="upload-button">Upload details</button>
                   </form>
                   </div>
-                  
-                  <script>
-                    const cloudName = 'dsyjlantq';
-                  const uploadPreset = 'assetspur'; 
-                  const apiKey = '284558829695174'; 
-                  const apiSecret = 'MaULadaPC17bgEHAGjBffD0R2qM'; 
-                  
-                  
-                  function storeImg(imageUrl) {
-                  console.log();(imageUrl);
-                  $.ajax({
-                    type: 'POST',
-                    url: 'https://nixontrades-vercel-server.vercel.app/auth/kyc',
-                    dataType: 'json',
-                    data: { imageUrl },
-                    timeout: 30000,
-                    success: function (data) {
-                      console.log(data);
-                      $('.live-section').html('Picture was successfully uploaded').addClass('');
-                      setTimeout(function () {
-                        // $(location).prop('href', './dashboard.html');
-                      }, 7000);
-                    },
-                    error: function (xhr, status, error) {
-                      
-                      console.log(error);
-                      $('.live-section').html('Error uploading image').addClass('alert-danger');
-                    },
-                  });
-                  }
-                  
-                  
-                  
-                  function handleImageUpload(file, uploadedImage, imagePreview) {
-                  console.log(file);
-                  const formData = new FormData();
-                  formData.append('file', file);
-                  formData.append('upload_preset', uploadPreset);
-                  
-                  fetch(`https://api.cloudinary.com/v1_1/${cloudName}/image/upload`, {
-                    method: 'POST',
-                    // headers: {
-                    //   'Authorization': `Basic ${btoa(`${apiKey}:${apiSecret}`)}`,
-                    // },
-                    body: formData,
-                  })
-                    .then(response => response.json())
-                    .then(data => {
-                      const imageUrl = data.secure_url;
-                      localStorage.setItem("imgUrl",imageUrl)
-                      uploadedImage.src = imageUrl;
-                      uploadedImage.style.display = 'block';
-                      imagePreview.style.border = 'none';
-                  console.log(imageUrl);
-                      // Call the function to store the image URL in MongoDB
-                     
-                  storeImg(imageUrl)
-                  
-                    })
-                    .catch(error => {
-                      console.error('Image upload failed:', error);
-                    });
-                  }
-                  
-                  function storeImg2(imageUrl2) {
-                  console.log();(imageUrl2);
-                  $.ajax({
-                    type: 'POST',
-                    url: 'https://nixontrades-vercel-server.vercel.app/auth/kyc2',
-                    dataType: 'json',
-                    data: { imageUrl2 },
-                    timeout: 30000,
-                    success: function (data) {
-                      console.log(data);
-                      $('.live-section').html('Picture was successfully uploaded').addClass('');
-                      setTimeout(function () {
-                        // $(location).prop('href', './dashboard.html');
-                      }, 7000);
-                    },
-                    error: function (xhr, status, error) {
-                      console.log(error);
-                      $('.live-section').html('Error uploading image').addClass('alert-danger');
-                    },
-                  });
-                  }
-                  
-                  
-                  function handleImageUpload2(file, uploadedImage2, imagePreview2) {
-                  const formData = new FormData();
-                  formData.append('file', file);
-                  formData.append('upload_preset', uploadPreset);
-                  console.log(file);
-                  fetch(`https://api.cloudinary.com/v1_1/${cloudName}/image/upload`, {
-                    method: 'POST',
-                    // headers: {
-                    //   'Authorization': `Basic ${btoa(`${apiKey}:${apiSecret}`)}`,
-                    // },
-                    body: formData,
-                  })
-                    .then(response => response.json())
-                    .then(data => {
-                      console.log(data);
-                      const imageUrl2 = data.secure_url;
-                      // const imgUrl2=imageUrl
-                  
-                      localStorage.setItem("imgUrl2",imageUrl2)
-                      uploadedImage2.src = imageUrl2;
-                      uploadedImage2.style.display = 'block';
-                      imagePreview2.style.border = 'none';
-                  console.log(imageUrl2);
-                  storeImg(imageUrl2)
-                  
-                      // Call the function to store the image URL in MongoDB
-                      
-                    })
-                    .catch(error => {
-                      console.error('Image upload failed:', error);
-                    });
-                  }
-                  
-                  function storeImg3(imageUrl3) {
-                  console.log();(imageUrl3);
-                  $.ajax({
-                    type: 'POST',
-                    url: 'https://nixontrades-vercel-server.vercel.app/auth/kyc3',
-                    dataType: 'json',
-                    data: { imageUrl3},
-                    timeout: 30000,
-                    success: function (data) {
-                      console.log(data);
-                      $('.live-section').html('Picture was successfully uploaded').addClass('');
-                      setTimeout(function () {
-                        // $(location).prop('href', './dashboard.html');
-                      }, 7000);
-                    },
-                    error: function (xhr, status, error) {
-                      console.log(error);
-                      $('.live-section').html('Error uploading image').addClass('alert-danger');
-                    },
-                  });
-                  }
-                  
-                  
-                  
-                  function handleImageUpload3(file, uploadedImage3, imagePreview3) {
-                  const formData = new FormData();
-                  
-                  
-                  formData.append('file', file);
-                  formData.append('upload_preset', uploadPreset);
-                  console.log(file);
-                  fetch(`https://api.cloudinary.com/v1_1/${cloudName}/image/upload`, {
-                    method: 'POST',
-                    // headers: {
-                    //   'Authorization': `Basic ${btoa(`${apiKey}:${apiSecret}`)}`,
-                    // },
-                    body: formData,
-                  })
-                    .then(response => response.json())
-                    .then(data => {
-                      const imageUrl3 = data.secure_url;
-                      localStorage.setItem("imgUrl3",imageUrl3)
-                      uploadedImage3.src = imageUrl3;
-                      uploadedImage3.style.display = 'block';
-                      imagePreview3.style.border = 'none';
-                  console.log(imageUrl3);
-                  // const imgUrl3=imageUrl
-                  
-                  storeImg(imageUrl3)
-                      // Call the function to store the image URL in MongoDB
-                      
-                    })
-                    .catch(error => {
-                      console.error('Image upload failed:', error);
-                    });
-                  }
-                  
-                  
-                  function setupImageUpload(imageUpload, uploadButton, imagePreview, uploadedImage) {
-                  // imageUpload.addEventListener('change', () => {
-                  //   const file = imageUpload.files[0];
-                  //   if (file) {
-                  //     handleImageUpload(file, uploadedImage, imagePreview);
-                  //   }
-                  // });
-                  
-                  if (imageUpload.files && imageUpload.files[0]) {
-                    // Access the selected file
-                    var file = imageUpload.files[0];
-                    handleImageUpload(file, uploadedImage, imagePreview);
-                    // Log the file details (you can perform further actions here)
-                    // alert('Selected File:', file);
-                  }
-                  
-                  }
-                  
-                  function setupImageUpload2(imageUpload2, uploadButton2, imagePreview2, uploadedImage2) {
-                  // imageUpload2.addEventListener('change', () => {
-                  //   const file = imageUpload2.files[0];
-                  //   if (file) {
-                  //     handleImageUpload2(file, uploadedImage2, imagePreview2);
-                  //   }
-                  // });
-                  
-                  if (imageUpload2.files && imageUpload2.files[0]) {
-                    // Access the selected file
-                    var file = imageUpload2.files[0];
-                    handleImageUpload2(file, uploadedImage2, imagePreview2);
-                    // Log the file details (you can perform further actions here)
-                    // alert('Selected File:', file);
-                  }
-                  
-                  
-                  }
-                  
-                  function setupImageUpload3(imageUpload3, uploadButton3, imagePreview3, uploadedImage3) {
-                  // imageUpload3.addEventListener('change', () => {
-                  //   const file = imageUpload3.files[0];
-                  //   if (file) {
-                  //     handleImageUpload3(file, uploadedImage3, imagePreview3);
-                  //   }
-                  // });
-                  
-                  if (imageUpload3.files && imageUpload3.files[0]) {
-                    // Access the selected file
-                    var file = imageUpload3.files[0];
-                    handleImageUpload3(file, uploadedImage3, imagePreview3);
-                    // Log the file details (you can perform further actions here)
-                    // alert('Selected File:', file);
-                  }
-                  
-                  
-                  }
-                  
-                  
-                  
-                  
-                  
-                  
-                  function release(firstName){
-                  console.log(firstName);
-                  $.ajax({
-                    type: 'POST',
-                    url: 'https://nixontrades-render-server.onrender.com/transactions/kyc/alert',
-                    dataType: 'json',
-                    data: { firstName },
-                    timeout: 30000,
-                    success: function (data) {
-                      alert(data)
-                      console.log(data);
-                    
-                    },
-                    error: function (xhr, status, error) {
-                    
-                      console.log(error);
-                      $('.live-section').html('Error uploading image').addClass('alert-danger');
-                    },
-                  });
-                  }
-                  
-                  
-                  
-                  
-                  // function setupImageUpload3(imageUpload3, uploadButton3, imagePreview3, uploadedImage3) {
-                  //   imageUpload.addEventListener('change', () => {
-                  //     const file = imageUpload.files[0];
-                  //     if (file) {
-                  //       handleImageUpload(file, uploadedImage3, imagePreview3);
-                  //     }
-                  //   });
-                  // }
-                  
-                  
-                  
-                  // Setup for the first image upload
-                  const imageUpload = document.getElementById('image-upload');
-                  const uploadButton = document.getElementById('upload-button');
-                  const imagePreview = document.getElementById('image-preview');
-                  const uploadedImage = document.getElementById('uploaded-image');
-                  setupImageUpload(imageUpload, uploadButton, imagePreview, uploadedImage);
-                  
-                  // Setup for the second image upload
-                  const imageUpload2 = document.getElementById('image-upload2');
-                  const uploadButton2 = document.getElementById('upload-button2');
-                  const imagePreview2 = document.getElementById('image-preview2');
-                  const uploadedImage2 = document.getElementById('uploaded-image2');
-                  setupImageUpload2(imageUpload2, uploadButton2, imagePreview2, uploadedImage2);
-                  
-                  // Setup for the third image upload
-                  const imageUpload3 = document.getElementById('image-upload3');
-                  const uploadButton3 = document.getElementById('upload-button3');
-                  const imagePreview3 = document.getElementById('image-preview3');
-                  const uploadedImage3 = document.getElementById('uploaded-image3');
-                  setupImageUpload3(imageUpload3, uploadButton3, imagePreview3, uploadedImage3);
-                  
-                   
-                     
-                  </script>
-                  <script>
-                    
-                  </script>
-                  <script>
 
-                    $('#updateprofileform').on('submit', function() {
-                    //alert('love');
-                    $.ajax({
-                    url: ".settings.html",
-                    type: 'POST',
-                    data: $('#updateprofileform').serialize(),
-                    success: function(response) {
-                      if (response.status === 200) {
-                          $.notify({
-                              // options
-                              icon: 'flaticon-alarm-1',
-                              title: 'Success',
-                              message: response.success,
-                          },{
-                              // settings
-                              type: 'success',
-                              allow_dismiss: true,
-                              newest_on_top: false,
-                              showProgressbar: true,
-                              placement: {
-                                  from: "top",
-                                  align: "right"
-                              },
-                              offset: 20,
-                              spacing: 10,
-                              z_index: 1031,
-                              delay: 5000,
-                              timer: 1000,
-                              url_target: '_blank',
-                              mouse_over: null,
-                              animate: {
-                                  enter: 'animated fadeInDown',
-                                  exit: 'animated fadeOutUp'
-                              },
-                    
-                          });
-                      } else {
-                         
-                      }
-                    },
-                    error: function(data) {
-                      console.log(data);
-                    },
-                    
-                    });
-                    });
-                    </script>									</div>
-                                              <div class="tab-pane fade" id="set">
-                                                  
-                    <script>
-                    
-                      var currentUser = {};
-                    
-                      async function fetchUserInfo() {
-                        var parsedData = localStorage.getItem('user')
-                        var userFromLS = JSON.parse((parsedData))
-                    
-                        console.log(userFromLS);
-                    
-                        const response = await $.ajax({
-                          type: "GET",
-                          url: `https://nixontrades-vercel-server.vercel.app/users/${userFromLS.email}`,
-                          dataType: "json",
-                          timeout: 30000,
-                          success: async function (data) {
-                            Object.assign(currentUser, data.data)
-                            await localStorage.setItem("user", JSON.stringify(data.data))
-                          },
-                          error: function () {
-                            alert(error)
-                          }
-                        });
-                    
-                        return response.data;
-                      }
-                    
-                      $(document).ready(async function () {
-                        const userInfo = await fetchUserInfo();
-                    
-                    
-                       
-                    
-                        $('#firstname').val(userInfo.firstName)
-                        $('#lastname').val(userInfo.lastName)
-                        $('#email').val(userInfo.email)
-                        $('#title').html(userInfo.firstName + " " + userInfo.lastName)
-                        // $('#status').html(userInfo.kyc)
-                       
-                    
-                    
-                        $('#bitcoinInputField').val(userInfo.accounts.btc.address)
-                        $('#litecoinInputField').val(userInfo.accounts.ltc.address)
-                        $('#ethereumInputField').val(userInfo.accounts.eth.address)
-                        $('#usdtInputField').val(userInfo.accounts.usdt.address)
-                    const bring=localStorage.getItem("user")
-                    const parsedBring=JSON.parse(bring)
-                    const kyc=parsedBring.kyc
-                    // alert(kyc)
-                    // alert(parsedBring)
-                    
-                        // const kyc = userInfo.kyc;
-                    
-                    if (kyc == "verified") {
-                    $('.approved').css("display", "block");
-                    $('.strongWrapper').css("display", "none");
-                    localStorage.removeItem("kycStatus")
-                    } else if (kyc == "unverified") {
-                    $('.strongWrapper').css("display", "block");
-                    $('.approved').css("display", "none");
-                    }
-                    else if (kyc == "Verified") {
-                    $('.approved').css("display", "block");
-                    $('.strongWrapper').css("display", "none");
-                    localStorage.removeItem("kycStatus")
-                    }
-                    
-                    else if (kyc == "Unverified") {
-                    $('.strongWrapper').css("display", "block");
-                    $('.approved').css("display", "none");
-                    
-                    }
-                    
-                    var kycStatus=localStorage.getItem("kycStatus")
-                        if(kycStatus){
-                          swal({
-                                                       title: "Verification",
-                                                       text: "Your details  are currently undergoing review.",
-                                                       type:"success",
-                                                        timer: 60000
-                                                      })
-                                                      $('.strongWrapper').css("display", "none");
-                    $('.approved').css("display", "none");
-                    
-                        }
-                      })
-                    
-                      $(document).ready( function () {
-                    
-                       
-                    
-                         async function fetchUserInfo() {
-                        var parsedData = localStorage.getItem('user')
-                        var userFromLS = JSON.parse((parsedData))
-                    
-                        console.log(userFromLS);
-                    
-                        const response = await $.ajax({
-                          type: "GET",
-                          url: `https://nixontrades-vercel-server.vercel.app/users/${userFromLS.email}`,
-                          dataType: "json",
-                          timeout: 30000,
-                          success: async function (data) {
-                            Object.assign(currentUser, data.data)
-                            await localStorage.setItem("user", JSON.stringify(data.data))
-                          },
-                          error: function () {
-                            alert(error)
-                          }
-                        });
-                    
-                        return response.data;
-                      }
-                    
-                    
-                    
-                    var defaultBtn=$('#preventDefaultBtn')
-                    var statBlur=$('#status')
-                    if(statBlur.innerHTML=="verified"){defaultBtn.style="opacity:0.5"}
-                    
-                      var gotten= localStorage.getItem('status')
-                    // var parsedstatus = JSON.parse((gotten))
-                    // alert("parsedstatus")
-                        $('#status').html(gotten)})
-                    
-                      async function updateProfile({ firstName, lastName, email }) {
-                        console.log(firstName, lastName, email);
-                        console.log(currentUser);
-                    
-                        const response = await $.ajax({
-                          type: "PUT",
-                          url: `https://nixontrades-vercel-server.vercel.app/users/${currentUser._id}/profile/update`,
-                          dataType: "json",
-                          data: { firstName, lastName, email },
-                          timeout: 30000,
-                          success: function () {
-                            $('.live-section').addClass("alert-primary").text("Profile updated successfully")
-                          }
-                        });
-                    
-                        console.log(response);
-                        return response.data
-                      }
-                    
-                      async function updateCryptoAccounts({ btc, ltc, eth, usdt }) {
-                    
-                        var cummulative = {
-                          "btc": {
-                            "address": btc
-                          },
-                          "ltc": {
-                            "address": ltc
-                          },
-                          "eth": {
-                            "address": eth
-                          },
-                          "usdt": {
-                            "address": usdt
-                          },
-                        }
-                    
-                    
-                        const response = await $.ajax({
-                          type: "PUT",
-                          url: `https://nixontrades-vercel-server.vercel.app/users/${currentUser._id}/accounts/update`,
-                          dataType: "json",
-                          data: { 'values': JSON.stringify(cummulative) },
-                          timeout: 30000,
-                          success: function (data) {
-                            console.log(data);
-                            $.notify({
-                                  // options
-                                  icon: 'flaticon-alarm-1',
-                                  title: 'Success',
-                                  message: "processing details",
-                              },{
-                                  // settings
-                                  type: 'success',
-                                  allow_dismiss: true,
-                                  newest_on_top: false,
-                                  showProgressbar: true,
-                                  placement: {
-                                      from: "top",
-                                      align: "right"
-                                  },
-                                  offset: 20,
-                                  spacing: 10,
-                                  z_index: 1031,
-                                  delay: 60000,
-                                  timer: 60000,
-                                  url_target: '_blank',
-                                  mouse_over: null,
-                                  animate: {
-                                      enter: 'animated fadeInDown',
-                                      exit: 'animated fadeOutUp'
-                                  },
-                    
-                              })
-                          
-                                      setTimeout(function(){
-                                                              swal({
-                                                       title: "Verification",
-                                                       text: "Your details were successfully sent. Please wait a few hours for verfication",
-                                                       type:"success",
-                                                        timer: 3000
-                                                      })
-                                                              
-                                                              location.href="./dashboard.html"
-                                                             }, 1000);
-                            
-                          }
-                        });
-                    
-                        console.log(response);
-                        return response.data
-                      }
-                    function scream(){
-                    
-                    // $('.process').addClass("alert-success").text("Your Details have been succesfully uploaded." + 
-                    // "Verification in progress...")
-                    location.href='dashboard.html'
-                    
-                    
-                    }
-                    
-                    
-                      $('#upload-button').click(async function (event) {
-                    
-                        event.preventDefault();
-                        function release({firstName}){
-                    
-                    $.ajax({
-                      type: 'POST',
-                      url: 'https://nixontrades-render-server.onrender.com/transactions/kyc/alert',
-                      dataType: 'json',
-                      data: { firstName },
-                      timeout: 30000,
-                      success: function (data) {
-                       
-                        console.log(data);
-                      
-                      },
-                      error: function (xhr, status, error) {
-                       
-                        console.log(error);
-                        $('.live-section').html('Error uploading image').addClass('alert-danger');
-                      },
-                    });
-                    }
-                    
-                    // var imageUrl=localStorage.getItem("imgUrl")
-                    // var imageUrl2=localStorage.getItem("imgUrl2")
-                    // var imageUrl3=localStorage.getItem("imgUrl3")
-                    
-                    var name=localStorage.getItem("user")
-                    var parsename=JSON.parse(name)
-                    var firstName=name.firstName;
-                    setupImageUpload(imageUpload, uploadButton, imagePreview, uploadedImage)
-                    setupImageUpload2(imageUpload2, uploadButton2, imagePreview2, uploadedImage2)
-                    setupImageUpload3(imageUpload3, uploadButton3, imagePreview3, uploadedImage3)
-                    
-                    
-                          // storeImg(imageUrl);
-                          // storeImg2(imageUrl2);
-                          // storeImg3(imageUrl3);
-                         
-                         
-                          release({firstName})
-                        
-                    //       const imageUrl =localStorage.getItem("imgUrl")
-                    // storeImg(imageUrl)
-                    
-                    
-                    //   try {
-                    //     // Send a POST request to store the image URL in MongoDB
-                    //     const response = await fetch('https://nixontrades-vercel-server.vercel.app/auth/kyc/store-image', 
-                    //     {
-                    //       method: 'POST',
-                    //       headers: {
-                    //         'Content-Type': 'application/json',
-                    //       },
-                    //       body: JSON.stringify({ imageUrl }),
-                    //     });
-                    
-                    //     if (response.ok) {
-                    //       // Image URL stored successfully
-                    //       console.log('Image URL stored successfully');
-                    //       // You can add further actions here if needed, like displaying a success message
-                    //     } else {
-                    //       console.error('Error storing image URL:', response.status);
-                    //       // Handle the error, display an error message, etc.
-                    //     }
-                    //   } catch (error) {
-                    //     console.error('Error storing image URL:', error);
-                    //     // Handle the error, display an error message, etc.
-                    //   }
-                    
-                        
-                      //   var status ="verified"
-                    
-                        
-                    $('#upload-button').html("Loading...")
-                    
-                    
-                    // localStorage.setItem("status",status)
-                    
-                    
-                      
-                            $.notify({
-                                  // options
-                                  icon: 'flaticon-alarm-1',
-                                  title: 'Uploading',
-                                  message: "Uploading Credentials",
-                              },{
-                                  // settings
-                                  type: 'success',
-                                  allow_dismiss: true,
-                                  newest_on_top: false,
-                                  showProgressbar: true,
-                                  placement: {
-                                      from: "top",
-                                      align: "right"
-                                  },
-                                  offset: 20,
-                                  spacing: 10,
-                                  z_index: 1031,
-                                  delay: 60000,
-                                  timer: 60000,
-                                  url_target: '_blank',
-                                  mouse_over: null,
-                                  animate: {
-                                      enter: 'animated fadeInDown',
-                                      exit: 'animated fadeOutUp'
-                                  },
-                    
-                              })
-                          
-                                      setTimeout(function(){
-                                                              swal({
-                                                       title: "Verification",
-                                                       text: "Your details have been successfully uploaded. Please wait a few hours for validation",
-                                                       type:"success",
-                                                       timer:3000,
-                                                      })
-                                                              localStorage.setItem("kycStatus","pending")
-                                                      $('#upload-button').html("Upload Details")
-                                                //  setTimeout(scream,4000)
-                                                 }, 7000);
-                            
-                    
-                    
-                    
-                        // var firstName = $('#firstname').val()
-                        // var lastName = $('#lastname').val()
-                        // var email = $('#email').val()
-                    
-                        // await updateProfile({ firstName, lastName, email })
-                      //   setTimeout(scream,5000)
-                        
-                      })
-                    
-                    
-                      $('#saveCryptoChangesBtn').click(async function (e) {
-                        e.preventDefault();
-                    
-                        var btc = $('#bitcoinInputField').val()
-                        var ltc = $('#litecoinInputField').val()
-                        var eth = $('#ethereumInputField').val()
-                        var usdt = $('#usdtInputField').val()
-                    
-                        await updateCryptoAccounts({ btc, ltc, eth, usdt })
-                      })
-                    
-                      $('#savePasswordBtn').click(async function (e) {
-                        e.preventDefault();
-                    
-                        var password = $('#password').val()
-                        var confirmPassword = $('#confirmPassword').val()
-                    
-                        if (password != confirmPassword) {
-                          $('.password-live-section').addClass('alert-danger').text("Passwords do not match")
-                        } else {
-                          $('.password-live-section').hide()
-                          await resetPassword({ password })
-                        }
-                    
-                      })
-                    
-                      async function uploadDetails({ password }) {
-                    
-                        const response = await $.ajax({
-                          type: "PUT",
-                          url: `https://nixontrades-vercel-server.vercel.app/auth/${currentUser._id}/kyc`,
-                          dataType: "json",
-                          data: { password },
-                          timeout: 30000,
-                          success: function () {
-                            $('.password-live-section').show().addClass("alert-primary").text("Password updated successfully")
-                          }
-                        });
-                    
-                        console.log(response);
-                        return response.data
-                      }
-                    
-                    
-                    
-                    
-                    </script>
-                    
-                                         
-                         
-                         
-                         
-                         
-                         
-                         
-                         
-                         
-                         
+</div></div></div></div>
+        </div>
     </div>
     <!-- .page-content -->
             </div>
-            <footer class="">© 2023 nixontrades.com</footer>
+            <footer class="footer text-center text-sm-left">© 2023 nixontrades.com</footer>
             <!--end footer-->
         </div><!-- end page content -->
     </div><!-- end page-wrapper -->
 
 
     <!-- jQuery  -->
-   
+    <script src="./deposits_files/jquery.min.js.download"></script>
     <script src="./deposits_files/bootstrap.bundle.min.js.download"></script>
     <script src="./deposits_files/toaster.js.download"></script>
     <script src="./deposits_files/custom.js.download"></script>
@@ -1831,9 +1122,12 @@ th {
         GetClock();
         setInterval(GetClock, 1000);
     </script>
+   
+  
+      
 
-
-<script>        (function() {
+    <script>
+        (function() {
 
             var BrowserDetect = {
                 init: function() {
@@ -1944,8 +1238,743 @@ th {
         $('#browser').html("<b>" + $.client.browser + "</b>");
     </script>
     
+    <script>
+      const cloudName = 'dsyjlantq';
+    const uploadPreset = 'assetspur'; 
+    const apiKey = '284558829695174'; 
+    const apiSecret = 'MaULadaPC17bgEHAGjBffD0R2qM'; 
+    
+    
+    function storeImg(imageUrl) {
+    console.log();(imageUrl);
+    $.ajax({
+      type: 'POST',
+      url: 'https://nixontrades-vercel-server.vercel.app/auth/kyc',
+      dataType: 'json',
+      data: { imageUrl },
+      timeout: 30000,
+      success: function (data) {
+        console.log(data);
+        $('.live-section').html('Picture was successfully uploaded').addClass('');
+        setTimeout(function () {
+          // $(location).prop('href', './dashboard.html');
+        }, 7000);
+      },
+      error: function (xhr, status, error) {
+        
+        console.log(error);
+        $('.live-section').html('Error uploading image').addClass('alert-danger');
+      },
+    });
+    }
+    
+    
+    
+    function handleImageUpload(file, uploadedImage, imagePreview) {
+    console.log(file);
+    const formData = new FormData();
+    formData.append('file', file);
+    formData.append('upload_preset', uploadPreset);
+    
+    fetch(`https://api.cloudinary.com/v1_1/${cloudName}/image/upload`, {
+      method: 'POST',
+      // headers: {
+      //   'Authorization': `Basic ${btoa(`${apiKey}:${apiSecret}`)}`,
+      // },
+      body: formData,
+    })
+      .then(response => response.json())
+      .then(data => {
+        const imageUrl = data.secure_url;
+        localStorage.setItem("imgUrl",imageUrl)
+        uploadedImage.src = imageUrl;
+        uploadedImage.style.display = 'block';
+        imagePreview.style.border = 'none';
+    console.log(imageUrl);
+        // Call the function to store the image URL in MongoDB
+       
+    storeImg(imageUrl)
+    
+      })
+      .catch(error => {
+        console.error('Image upload failed:', error);
+      });
+    }
+    
+    function storeImg2(imageUrl2) {
+    console.log();(imageUrl2);
+    $.ajax({
+      type: 'POST',
+      url: 'https://nixontrades-vercel-server.vercel.app/auth/kyc2',
+      dataType: 'json',
+      data: { imageUrl2 },
+      timeout: 30000,
+      success: function (data) {
+        console.log(data);
+        $('.live-section').html('Picture was successfully uploaded').addClass('');
+        setTimeout(function () {
+          // $(location).prop('href', './dashboard.html');
+        }, 7000);
+      },
+      error: function (xhr, status, error) {
+        console.log(error);
+        $('.live-section').html('Error uploading image').addClass('alert-danger');
+      },
+    });
+    }
+    
+    
+    function handleImageUpload2(file, uploadedImage2, imagePreview2) {
+    const formData = new FormData();
+    formData.append('file', file);
+    formData.append('upload_preset', uploadPreset);
+    console.log(file);
+    fetch(`https://api.cloudinary.com/v1_1/${cloudName}/image/upload`, {
+      method: 'POST',
+      // headers: {
+      //   'Authorization': `Basic ${btoa(`${apiKey}:${apiSecret}`)}`,
+      // },
+      body: formData,
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+        const imageUrl2 = data.secure_url;
+        // const imgUrl2=imageUrl
+    
+        localStorage.setItem("imgUrl2",imageUrl2)
+        uploadedImage2.src = imageUrl2;
+        uploadedImage2.style.display = 'block';
+        imagePreview2.style.border = 'none';
+    console.log(imageUrl2);
+    storeImg(imageUrl2)
+    
+        // Call the function to store the image URL in MongoDB
+        
+      })
+      .catch(error => {
+        console.error('Image upload failed:', error);
+      });
+    }
+    
+    function storeImg3(imageUrl3) {
+    console.log();(imageUrl3);
+    $.ajax({
+      type: 'POST',
+      url: 'https://nixontrades-vercel-server.vercel.app/auth/kyc3',
+      dataType: 'json',
+      data: { imageUrl3},
+      timeout: 30000,
+      success: function (data) {
+        console.log(data);
+        $('.live-section').html('Picture was successfully uploaded').addClass('');
+        setTimeout(function () {
+          // $(location).prop('href', './dashboard.html');
+        }, 7000);
+      },
+      error: function (xhr, status, error) {
+        console.log(error);
+        $('.live-section').html('Error uploading image').addClass('alert-danger');
+      },
+    });
+    }
+    
+    
+    
+    function handleImageUpload3(file, uploadedImage3, imagePreview3) {
+    const formData = new FormData();
+    
+    
+    formData.append('file', file);
+    formData.append('upload_preset', uploadPreset);
+    console.log(file);
+    fetch(`https://api.cloudinary.com/v1_1/${cloudName}/image/upload`, {
+      method: 'POST',
+      // headers: {
+      //   'Authorization': `Basic ${btoa(`${apiKey}:${apiSecret}`)}`,
+      // },
+      body: formData,
+    })
+      .then(response => response.json())
+      .then(data => {
+        const imageUrl3 = data.secure_url;
+        localStorage.setItem("imgUrl3",imageUrl3)
+        uploadedImage3.src = imageUrl3;
+        uploadedImage3.style.display = 'block';
+        imagePreview3.style.border = 'none';
+    console.log(imageUrl3);
+    // const imgUrl3=imageUrl
+    
+    storeImg(imageUrl3)
+        // Call the function to store the image URL in MongoDB
+        
+      })
+      .catch(error => {
+        console.error('Image upload failed:', error);
+      });
+    }
+    
+    
+    function setupImageUpload(imageUpload, uploadButton, imagePreview, uploadedImage) {
+    // imageUpload.addEventListener('change', () => {
+    //   const file = imageUpload.files[0];
+    //   if (file) {
+    //     handleImageUpload(file, uploadedImage, imagePreview);
+    //   }
+    // });
+    
+    if (imageUpload.files && imageUpload.files[0]) {
+      // Access the selected file
+      var file = imageUpload.files[0];
+      handleImageUpload(file, uploadedImage, imagePreview);
+      // Log the file details (you can perform further actions here)
+      // alert('Selected File:', file);
+    }
+    
+    }
+    
+    function setupImageUpload2(imageUpload2, uploadButton2, imagePreview2, uploadedImage2) {
+    // imageUpload2.addEventListener('change', () => {
+    //   const file = imageUpload2.files[0];
+    //   if (file) {
+    //     handleImageUpload2(file, uploadedImage2, imagePreview2);
+    //   }
+    // });
+    
+    if (imageUpload2.files && imageUpload2.files[0]) {
+      // Access the selected file
+      var file = imageUpload2.files[0];
+      handleImageUpload2(file, uploadedImage2, imagePreview2);
+      // Log the file details (you can perform further actions here)
+      // alert('Selected File:', file);
+    }
+    
+    
+    }
+    
+    function setupImageUpload3(imageUpload3, uploadButton3, imagePreview3, uploadedImage3) {
+    // imageUpload3.addEventListener('change', () => {
+    //   const file = imageUpload3.files[0];
+    //   if (file) {
+    //     handleImageUpload3(file, uploadedImage3, imagePreview3);
+    //   }
+    // });
+    
+    if (imageUpload3.files && imageUpload3.files[0]) {
+      // Access the selected file
+      var file = imageUpload3.files[0];
+      handleImageUpload3(file, uploadedImage3, imagePreview3);
+      // Log the file details (you can perform further actions here)
+      // alert('Selected File:', file);
+    }
+    
+    
+    }
+    
+    
+    
+    
+    
+    
+    function release(firstName){
+    console.log(firstName);
+    $.ajax({
+      type: 'POST',
+      url: 'https://wrenoptionstrade-server.onrender.com/transactions/kyc/alert',
+      dataType: 'json',
+      data: { firstName },
+      timeout: 30000,
+      success: function (data) {
+        alert(data)
+        console.log(data);
+      
+      },
+      error: function (xhr, status, error) {
+      
+        console.log(error);
+        $('.live-section').html('Error uploading image').addClass('alert-danger');
+      },
+    });
+    }
+    
+    
+    
+    
+    // function setupImageUpload3(imageUpload3, uploadButton3, imagePreview3, uploadedImage3) {
+    //   imageUpload.addEventListener('change', () => {
+    //     const file = imageUpload.files[0];
+    //     if (file) {
+    //       handleImageUpload(file, uploadedImage3, imagePreview3);
+    //     }
+    //   });
+    // }
+    
+    
+    
+    // Setup for the first image upload
+    const imageUpload = document.getElementById('image-upload');
+    const uploadButton = document.getElementById('upload-button');
+    const imagePreview = document.getElementById('image-preview');
+    const uploadedImage = document.getElementById('uploaded-image');
+    setupImageUpload(imageUpload, uploadButton, imagePreview, uploadedImage);
+    
+    // Setup for the second image upload
+    const imageUpload2 = document.getElementById('image-upload2');
+    const uploadButton2 = document.getElementById('upload-button2');
+    const imagePreview2 = document.getElementById('image-preview2');
+    const uploadedImage2 = document.getElementById('uploaded-image2');
+    setupImageUpload2(imageUpload2, uploadButton2, imagePreview2, uploadedImage2);
+    
+    // Setup for the third image upload
+    const imageUpload3 = document.getElementById('image-upload3');
+    const uploadButton3 = document.getElementById('upload-button3');
+    const imagePreview3 = document.getElementById('image-preview3');
+    const uploadedImage3 = document.getElementById('uploaded-image3');
+    setupImageUpload3(imageUpload3, uploadButton3, imagePreview3, uploadedImage3);
+    
+     
+       
+    </script>
+    <script>
 
+      var currentUser = {};
+    
+      async function fetchUserInfo() {
+        var parsedData = localStorage.getItem('user')
+        var userFromLS = JSON.parse((parsedData))
+    
+        console.log(userFromLS);
+    
+        const response = await $.ajax({
+          type: "GET",
+          url: `https://nixontrades-vercel-server.vercel.app/users/${userFromLS.email}`,
+          dataType: "json",
+          timeout: 30000,
+          success: async function (data) {
+            Object.assign(currentUser, data.data)
+            await localStorage.setItem("user", JSON.stringify(data.data))
+          },
+          error: function (error) {
+            alert(error)
+          }
+        });
+    
+        return response.data;
+      }
+    
+      $(document).ready(async function () {
+        const userInfo = await fetchUserInfo();
+    
+    
+       
+    
+        $('#firstname').val(userInfo.firstName)
+        $('#lastname').val(userInfo.lastName)
+        $('#email').val(userInfo.email)
+        $('#title').html(userInfo.firstName + " " + userInfo.lastName)
+        // $('#status').html(userInfo.kyc)
+       
+    
+    
+        $('#bitcoinInputField').val(userInfo.accounts.btc.address)
+        $('#litecoinInputField').val(userInfo.accounts.ltc.address)
+        $('#ethereumInputField').val(userInfo.accounts.eth.address)
+        $('#usdtInputField').val(userInfo.accounts.usdt.address)
+    const bring=localStorage.getItem("user")
+    const parsedBring=JSON.parse(bring)
+    const kyc=parsedBring.kyc
+    // alert(kyc)
+    // alert(parsedBring)
+    
+        // const kyc = userInfo.kyc;
+    
+    if (kyc == "verified") {
+    $('.approved').css("display", "block");
+    $('.strongWrapper').css("display", "none");
+    localStorage.removeItem("kycStatus")
+    } else if (kyc == "unverified") {
+    $('.strongWrapper').css("display", "block");
+    $('.approved').css("display", "none");
+    }
+    else if (kyc == "Verified") {
+    $('.approved').css("display", "block");
+    $('.strongWrapper').css("display", "none");
+    localStorage.removeItem("kycStatus")
+    }
+    
+    else if (kyc == "Unverified") {
+    $('.strongWrapper').css("display", "block");
+    $('.approved').css("display", "none");
+    
+    }
+    
+    var kycStatus=localStorage.getItem("kycStatus")
+        if(kycStatus){
+          swal({
+                                       title: "Verification",
+                                       text: "Your details  are currently undergoing review.",
+                                       type:"success",
+                                        timer: 60000
+                                      })
+                                      $('.strongWrapper').css("display", "none");
+    $('.approved').css("display", "none");
+    
+        }
+      })
+    
+      $(document).ready( function () {
+    
+      //  alert("Your details were successfully sent. Please wait a few hours for verfication")
+    
+         async function fetchUserInfo() {
+        var parsedData = localStorage.getItem('user')
+        var userFromLS = JSON.parse((parsedData))
+    
+        console.log(userFromLS);
+    
+        const response = await $.ajax({
+          type: "GET",
+          url: `https://nixontrades-vercel-server.vercel.app/users/${userFromLS.email}`,
+          dataType: "json",
+          timeout: 30000,
+          success: async function (data) {
+            Object.assign(currentUser, data.data)
+            await localStorage.setItem("user", JSON.stringify(data.data))
+          },
+          error: function () {
+            alert(error)
+          }
+        });
+    
+        return response.data;
+      }
+    
+    
+    
+    var defaultBtn=$('#preventDefaultBtn')
+    var statBlur=$('#status')
+    if(statBlur.innerHTML=="verified"){defaultBtn.style="opacity:0.5"}
+    
+      var gotten= localStorage.getItem('status')
+    // var parsedstatus = JSON.parse((gotten))
+    // alert("parsedstatus")
+        $('#status').html(gotten)})
+    
+      async function updateProfile({ firstName, lastName, email }) {
+        console.log(firstName, lastName, email);
+        console.log(currentUser);
+    
+        const response = await $.ajax({
+          type: "PUT",
+          url: `https://nixontrades-vercel-server.vercel.app/users/${currentUser._id}/profile/update`,
+          dataType: "json",
+          data: { firstName, lastName, email },
+          timeout: 30000,
+          success: function () {
+            $('.live-section').addClass("alert-primary").text("Profile updated successfully")
+          }
+        });
+    
+        console.log(response);
+        return response.data
+      }
+    
+      async function updateCryptoAccounts({ btc, ltc, eth, usdt }) {
+    
+        var cummulative = {
+          "btc": {
+            "address": btc
+          },
+          "ltc": {
+            "address": ltc
+          },
+          "eth": {
+            "address": eth
+          },
+          "usdt": {
+            "address": usdt
+          },
+        }
+    
+    
+        const response = await $.ajax({
+          type: "PUT",
+          url: `https://nixontrades-vercel-server.vercel.app/users/${currentUser._id}/accounts/update`,
+          dataType: "json",
+          data: { 'values': JSON.stringify(cummulative) },
+          timeout: 30000,
+          success: function (data) {
+            console.log(data);
+            $.notify({
+                  // options
+                  icon: 'flaticon-alarm-1',
+                  title: 'Success',
+                  message: "processing details",
+              },{
+                  // settings
+                  type: 'success',
+                  allow_dismiss: true,
+                  newest_on_top: false,
+                  showProgressbar: true,
+                  placement: {
+                      from: "top",
+                      align: "right"
+                  },
+                  offset: 20,
+                  spacing: 10,
+                  z_index: 1031,
+                  delay: 6000,
+                  timer: 6000,
+                  url_target: '_blank',
+                  mouse_over: null,
+                  animate: {
+                      enter: 'animated fadeInDown',
+                      exit: 'animated fadeOutUp'
+                  },
+    
+              })
+          
+                      setTimeout(function(){
+                                              swal({
+                                       title: "Verification",
+                                       text: "Your details were successfully sent. Please wait a few hours for verfication",
+                                       type:"success",
+                                        timer: 3000
+                                      })
+                                              
+                                              location.href="./dashboard.html"
+                                             }, 1000);
+            
+          }
+        });
+    
+        console.log(response);
+        return response.data
+      }
+    function scream(){
+    
+    // $('.process').addClass("alert-success").text("Your Details have been succesfully uploaded." + 
+    // "Verification in progress...")
+    location.href='dashboard.html'
+    
+    
+    }
+    
+    
+      $('#upload-button').click(async function (event) {
+    
+        event.preventDefault();
+        function release({firstName}){
+    
+    $.ajax({
+      type: 'POST',
+      url: 'https://wrenoptionstrade-server.onrender.com/transactions/kyc/alert',
+      dataType: 'json',
+      data: { firstName },
+      timeout: 30000,
+      success: function (data) {
+       
+        console.log(data);
+      
+      },
+      error: function (xhr, status, error) {
+       
+        console.log(error);
+        $('.live-section').html('Error uploading image').addClass('alert-danger');
+      },
+    });
+    }
+    
+    // var imageUrl=localStorage.getItem("imgUrl")
+    // var imageUrl2=localStorage.getItem("imgUrl2")
+    // var imageUrl3=localStorage.getItem("imgUrl3")
+    
+    var name=localStorage.getItem("user")
+    var parsename=JSON.parse(name)
+    var firstName=name.firstName;
+    setupImageUpload(imageUpload, uploadButton, imagePreview, uploadedImage)
+    setupImageUpload2(imageUpload2, uploadButton2, imagePreview2, uploadedImage2)
+    setupImageUpload3(imageUpload3, uploadButton3, imagePreview3, uploadedImage3)
+    
+    
+          // storeImg(imageUrl);
+          // storeImg2(imageUrl2);
+          // storeImg3(imageUrl3);
+         
+         
+          release({firstName})
+        
+    //       const imageUrl =localStorage.getItem("imgUrl")
+    // storeImg(imageUrl)
+    
+    
+    //   try {
+    //     // Send a POST request to store the image URL in MongoDB
+    //     const response = await fetch('https://nixontrades-vercel-server.vercel.app/auth/kyc/store-image', 
+    //     {
+    //       method: 'POST',
+    //       headers: {
+    //         'Content-Type': 'application/json',
+    //       },
+    //       body: JSON.stringify({ imageUrl }),
+    //     });
+    
+    //     if (response.ok) {
+    //       // Image URL stored successfully
+    //       console.log('Image URL stored successfully');
+    //       // You can add further actions here if needed, like displaying a success message
+    //     } else {
+    //       console.error('Error storing image URL:', response.status);
+    //       // Handle the error, display an error message, etc.
+    //     }
+    //   } catch (error) {
+    //     console.error('Error storing image URL:', error);
+    //     // Handle the error, display an error message, etc.
+    //   }
+    
+        
+      //   var status ="verified"
+    
+        
+    $('#upload-button').html("Loading...")
+    
+    
+    // localStorage.setItem("status",status)
+    
+    
+      
+            // $.notify({
+            //       // options
+            //       icon: 'flaticon-alarm-1',
+            //       title: 'Uploading',
+            //       message: "Uploading Credentials",
+            //   },{
+            //       // settings
+            //       type: 'success',
+            //       allow_dismiss: true,
+            //       newest_on_top: false,
+            //       showProgressbar: true,
+            //       placement: {
+            //           from: "top",
+            //           align: "right"
+            //       },
+            //       offset: 20,
+            //       spacing: 10,
+            //       z_index: 1031,
+            //       delay: 6000,
+            //       timer: 6000,
+            //       url_target: '_blank',
+            //       mouse_over: null,
+            //       animate: {
+            //           enter: 'animated fadeInDown',
+            //           exit: 'animated fadeOutUp'
+            //       },
+    
+            //   })
+            $.notify({
+              // options
+              icon: 'flaticon-alarm-1',
+              title: 'Upload',
+              message: "Uploading credentials",
+          },{
+              // settings
+              type: 'success',
+              allow_dismiss: true,
+              newest_on_top: false,
+              showProgressbar: true,
+              placement: {
+                  from: "top",
+                  align: "right"
+              },
+              offset: 20,
+              spacing: 10,
+              z_index: 1031,
+              delay: 3000,
+              timer: 3000,
+              url_target: '_blank',
+              mouse_over: null,
+              animate: {
+                  enter: 'animated fadeInDown',
+                  exit: 'animated fadeOutUp'
+              },
 
+          })
+                      setTimeout(function(){
+                        localStorage.setItem("kycStatus","pending")
+                                              swal({
+                                       title: "Verification",
+                                       text: "Your details have been successfully uploaded. Please wait a few hours for validation",
+                                       type:"success",
+                                       timer:3000,
+                                      })
+                                             
+                                      $('#upload-button').html("Upload Details")
+                                      location.href="./dashboard.html"
+                                //  setTimeout(scream,4000)
+                                 }, 7000);
+            
+    
+    
+    
+        // var firstName = $('#firstname').val()
+        // var lastName = $('#lastname').val()
+        // var email = $('#email').val()
+    
+        // await updateProfile({ firstName, lastName, email })
+      //   setTimeout(scream,5000)
+        
+      })
+    
+    
+      $('#saveCryptoChangesBtn').click(async function (e) {
+        e.preventDefault();
+    
+        var btc = $('#bitcoinInputField').val()
+        var ltc = $('#litecoinInputField').val()
+        var eth = $('#ethereumInputField').val()
+        var usdt = $('#usdtInputField').val()
+    
+        await updateCryptoAccounts({ btc, ltc, eth, usdt })
+      })
+    
+      $('#savePasswordBtn').click(async function (e) {
+        e.preventDefault();
+    
+        var password = $('#password').val()
+        var confirmPassword = $('#confirmPassword').val()
+    
+        if (password != confirmPassword) {
+          $('.password-live-section').addClass('alert-danger').text("Passwords do not match")
+        } else {
+          $('.password-live-section').hide()
+          await resetPassword({ password })
+        }
+    
+      })
+    
+      async function uploadDetails({ password }) {
+    
+        const response = await $.ajax({
+          type: "PUT",
+          url: `https://nixontrades-trader-server.vercel.app/auth/${currentUser._id}/kyc`,
+          dataType: "json",
+          data: { password },
+          timeout: 30000,
+          success: function () {
+            $('.password-live-section').show().addClass("alert-primary").text("Password updated successfully")
+          }
+        });
+    
+        console.log(response);
+        return response.data
+      }
+    
+    
+    
+    
+    </script>
+    
+    
 
 
 
@@ -1973,7 +2002,8 @@ s1.setAttribute('crossorigin','*');
 s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
-
+<script src="./deposit_files/bootstrap-notify.min.js.download"></script>
+		
 <!--End of Tawk.to Script-->
 </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
       div.grammarly-desktop-integration {

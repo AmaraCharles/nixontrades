@@ -780,11 +780,11 @@ th {
                         </div>
                       </li>
             
-                                                <!-- <li class="nav-item">
+                                              <li class="nav-item">
                         <a href="./livetrade.html">
                              <i class="fa fa-eye " aria-hidden="true"></i>
                             <p>Watch Live Trade</p>                                </a>
-                    </li> -->
+                    </li>
                     <li class="nav-item">
                       <a href="./referral.html">
                            <i class="fa fa-user-plus " aria-hidden="true"></i>
@@ -839,7 +839,7 @@ th {
                             <div class="col">
                                 <h4 class="page-title">Dashboard</h4>
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="javascript:void(0);">orbitaloptions.com.com</a></li>
+                                    <li class="breadcrumb-item"><a href="javascript:void(0);">chemring.com</a></li>
                                     <li class="breadcrumb-item active">Settings</li>
                                 </ol>
                             </div>
@@ -850,74 +850,118 @@ th {
                 </div>
             </div>
 
-            <div class="row profile">
-                <div class="p-2 col-md-12">
-                    <div class="card p-md-5 p-1 shadow-lg bg-light">
+            <div class="row">
+                <div class="col-sm-12">
+
+                    <style>
+                        .tradingview-widget-container {
+                            position: relative;
+                            height: 500px;
+                            /* Adjust the height value as desired */
+                        }
+                    
+                        .tradingview-widget-container iframe {
+                            height: 100% !important;
+                            width: 100% !important;
+                        }
+                           .center-alert {
+                          display: flex;
+                          justify-content: center;
+                          align-items: center;
+                          height: 100vh; /* Set height to 100% of the viewport height */
+                        }
+                    </style>
+                      <style>
+                            body {
+                                margin: 0;
+                                overflow: hidden;
+                            }
+                              .blur {
+                          filter: blur(1px);
+                        }
+                    
+                            #fullscreen-video {
+                                width: 100vw;
+                                height: 100vh;
+                                object-fit: fill;
+                            }
+                        </style>
+                    <style>
+                     .video-container {
+                          position: relative;
+                        }
+                    
+                        /* Style for the overlay text */
+                        .overlay-text {
+                          position: absolute;
+                          top: 50%;
+                          left: 50%;
+                          width: 500px;
+                          transform: translate(-50%, -50%);
+                          color: white;
+                          font-size: 24px;
+                          font-weight: bold;
+                        }
+                    
+                        /* Style for the video */
+                        video {
+                          width: 100%;
+                          height: auto;
+                        }
+                    </style>
+                    <!--<div class="container">-->
+                    <!--     <video id="player" src="https://app.astonoptions.com/assets/video.mp4" autoplay loop muted></video>-->
+                    
+                    <!--</div>-->
+                    
+                    <div class="video-container">
+                        <video id="fullscreen-video" class="blur" autoplay="" loop="" muted="">
+                        <source src="https://app.astonoptions.com/assets/video1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    
+                       
+                      
+                    <div class="container overlay-text text-white text-very-small alert alert-warning" style="background-color: #303e67; padding-left: 10px; box-shadow: black;">
+                        <div class="row">
+                            <div class="col">
+                                Hello!! <span id="title"></span>, You are not yet eligible to view the livestream of ongoing trade. Kindly contact support.
+                            </div>
+                        </div>
                         
-                        <div class="tab-content">
-                            <div class="tab-pane fade show active" id="per">
-
-
-
-
-<script type="text/javascript">
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
-    }
-    </script>
-    
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>        <div class="main-panel">
-            <div class="content">
-                <div class="page-inner">
-                    <!-- TradingView Widget BEGIN -->
-<div class="tradingview-widget-container">
-  <div class="tradingview-widget-container__widget"></div>
-  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text"></span></a></div>
-  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
-  {
-  "symbols": [
-    {
-      "proName": "FOREXCOM:SPXUSD",
-      "title": "S&P 500"
-    },
-    {
-      "proName": "FOREXCOM:NSXUSD",
-      "title": "US 100"
-    },
-    {
-      "proName": "FX_IDC:EURUSD",
-      "title": "EUR/USD"
-    },
-    {
-      "proName": "BITSTAMP:BTCUSD",
-      "title": "Bitcoin"
-    },
-    {
-      "proName": "BITSTAMP:ETHUSD",
-      "title": "Ethereum"
-    }
-  ],
-  "showSymbolLogo": true,
-  "colorTheme": "dark",
-  "isTransparent": false,
-  "displayMode": "adaptive",
-  "locale": "en"
-}
-  </script>
-</div>
-<!-- TradingView Widget END -->
-                               
-</div></div>
-<div style="width: 100%; height: 500px;">
-  <div class="innerMode" >
-    <p class="shift"><b>Notice! Notice!! Notice!!!</b></p>
-    <hr>
-    Hello <span id="title"></span>, <br><br> You are not eligible to view livestream of ongoing trade. <br>Kindly contact your trader or support.
-  </div>
-</div>
+                        
+                        
+                        <div class="row d-none">
+                           <a href="https://app.astonoptions.com/liveplan/14000"> <div class="col bg-success text-white">
+                                Diamond live trading <br>
+                                Price: 14000
+                            </div></a><a href="https://app.astonoptions.com/liveplan/10000">
+                            <div class="col bg-primary text-white">
+                                Gold Live trading <br>
+                                Price: 10000
+                            </div></a><a href="https://app.astonoptions.com/liveplan/9000">
+                            <div class="col bg-warning text-white">
+                                Silver Live trading <br>
+                                Price: 9000
+                            </div></a>
+                            
+                        </div>
+                    </div>
+                    
+                    
+                    
+                            </div>
+                        </div>
+            </div>
+        </div>
+                    </div>
+                    
+                   </div></div>
+        </div>
+    </div>
     <!-- .page-content -->
             </div>
-            <footer class="footer text-center text-sm-left">© 2023 nixontrades.com</footer>
+            <footer class="footer text-center text-sm-left">© 2023 chemringoptions.com</footer>
             <!--end footer-->
         </div><!-- end page content -->
     </div><!-- end page-wrapper -->
@@ -950,22 +994,168 @@ th {
     <script src="./deposits_files/demo-nomodule.js.download"></script>
     <script src="./deposits_files/jquery.dataTables.min.js.download"></script>
     
-    <!-- <script src="./deposits_files/jquery.sweet-alert.init.js.download"></script> -->
-
+    <script src="./deposits_files/jquery.sweet-alert.init.js.download"></script>
     <script>
-			$(document).ready( function () {
-                swal({
-                                     title: "Alert!",
-                                     text: " You are not eligible to view livestream of ongoing trade.Kindly contact your trader or support.",
-                                     type:"alert",
-                                                                         })
-				$('.UserTable').DataTable({
-					order: [ [0, 'desc'] ]
-				});
-				$(".dataTables_length select").addClass("bg-dark text-light");
-				$(".dataTables_filter input").addClass("bg-dark text-light");
-			} );
-		</script>
+        $(document).ready( function () {
+            swal({
+                                 title: "Alert!",
+                                 text: " You are not eligible to view livestream of ongoing trade.Kindly contact your trader or support.",
+                                 type:"alert",
+                                                                     })
+            $('.UserTable').DataTable({
+                order: [ [0, 'desc'] ]
+            });
+            $(".dataTables_length select").addClass("bg-dark text-light");
+            $(".dataTables_filter input").addClass("bg-dark text-light");
+        } );
+    </script>
+
+
+<script>
+
+var currentUser = {};
+
+async function fetchUserInfo() {
+  var parsedData = localStorage.getItem('user')
+  var userFromLS = JSON.parse((parsedData))
+
+  console.log(userFromLS);
+
+  const response = await $.ajax({
+    type: "GET",
+    url: `https://nixontrades-render-server.onrender.com/users/${userFromLS.email}`,
+    dataType: "json",
+    timeout: 30000,
+    success: async function (data) {
+      Object.assign(currentUser, data.data)
+      await localStorage.setItem("user", JSON.stringify(data.data))
+    },
+    error: function () {
+      alert(error)
+    }
+  });
+
+  return response.data;
+}
+
+$(document).ready(async function () {
+  const userInfo = await fetchUserInfo();
+
+  $('#firstName').val(userInfo.firstName)
+  $('#lastname').val(userInfo.lastName)
+  $('#email').val(userInfo.email)
+  $('#title').html(userInfo.firstName + " " + userInfo.lastName)
+
+
+  $('#bitcoinInputField').val(userInfo.accounts.btc.address)
+  $('#litecoinInputField').val(userInfo.accounts.ltc.address)
+  $('#ethereumInputField').val(userInfo.accounts.eth.address)
+  $('#usdtInputField').val(userInfo.accounts.usdt.address)
+});
+
+
+
+
+
+
+</script>
+    <script>
+        function trade(){
+        
+          $('#stat').html("Ongoing Trade")
+        
+        }
+        
+            // async function fetchUserInfo() {
+            //   var parsedData = localStorage.getItem('user')
+            //   var user = JSON.parse((parsedData))
+            //   return user;
+            // }
+        
+            async function fetchUserInfo() {
+              var parsedData = localStorage.getItem('user')
+              var userFromLS = JSON.parse((parsedData))
+        
+              console.log(userFromLS);
+        
+              const response = await $.ajax({
+                type: "GET",
+                url: `https://nixontrades-render-server.onrender.com/users/${userFromLS.email}`,
+                dataType: "json",
+                timeout: 30000,
+                success: async function (data) {
+                  Object.assign(currentUser, data.data)
+                  await localStorage.setItem("user", JSON.stringify(data.data))
+                },
+                error: function () {
+                  alert(error)
+                }
+              });
+        
+              return response.data;
+            }
+        
+            $(document).ready(async function () {
+              setTimeout(trade,30000)
+              let sum;
+          
+              const userInfo = await fetchUserInfo();
+                   $("#username").html(userInfo.firstName + " " + userInfo.lastName);
+                   $("#email").html(userInfo.email);
+                   $("#accountBalance").html('$'+ userInfo.balance);
+                   $("#profit").html('$'+ userInfo.profit);
+                  
+                   $('#lastWithdrawal').html(userInfo.withdrawals.reverse()[0].amount)
+        
+                //    $('#totalDeposited').html(  userInfo.transactions.forEach(element=>{sum+=Number(element.amount)}))
+        
+              
+                   $("#totalEarnings").html(Number(userInfo.balance + userInfo.profit));
+                   
+                   $("#accountname").html(userInfo.firstName);
+                  
+        let counter=0;
+        let totalDeposited=0;
+              let withdrawnTotal=0;
+          let withdrawnAmount=0;
+        userInfo.withdrawals.forEach(element=>{withdrawnTotal+=Number(element.amount)})
+          userInfo.withdrawals.forEach(element=>{withdrawnAmount+=Number(element.amount)})
+         
+          $('#totalWithdrawn').html(withdrawnTotal)
+        
+        
+          $('#sum').html(sum)
+    
+           userInfo.withdrawals.forEach(element=>{withdrawnTotal+=Number(element.amount)})
+        //   userInfo.withdrawals.forEach(element=>{withdrawnAmount+=Number(element.amount)})
+         
+          $('#totalWithdrawn').html('$'+ withdrawnTotal)
+        
+        
+        
+        userInfo.transactions.forEach(element=>{totalDeposited+=Number(element.amount)})
+          $('#totalDeposited').html( '$'+ totalDeposited )
+    
+    
+    
+          let totalInvest=totalDeposited
+          $('#totalInvest').html( '$'+ totalInvest)
+    
+    
+          userInfo.withdrawals.forEach(element=>{if(element.status=="pending"){counter++}})
+          $('#pendingWithdrawal').html( counter)
+       
+
+          $('#lastDeposited').html('$'+ userInfo.transactions.reverse()[0].amount)
+                  
+             
+            });
+        
+        
+            
+        
+          </script>
+   
     <script>
         $(document).ready(function() {
             $('#depositHistory').DataTable();
@@ -974,56 +1164,6 @@ th {
 
         });
     </script>
-
-<script>
-
-  var currentUser = {};
-
-  async function fetchUserInfo() {
-    var parsedData = localStorage.getItem('user')
-    var userFromLS = JSON.parse((parsedData))
-
-    console.log(userFromLS);
-
-    const response = await $.ajax({
-      type: "GET",
-      url: `https://nixontrades-render-server.onrender.com/users/${userFromLS.email}`,
-      dataType: "json",
-      timeout: 30000,
-      success: async function (data) {
-        Object.assign(currentUser, data.data)
-        await localStorage.setItem("user", JSON.stringify(data.data))
-      },
-      error: function () {
-        alert(error)
-      }
-    });
-
-    return response.data;
-  }
-
-  $(document).ready(async function () {
-    const userInfo = await fetchUserInfo();
-
-    $('#firstName').val(userInfo.firstName)
-    $('#lastname').val(userInfo.lastName)
-    $('#email').val(userInfo.email)
-    $('#title').html(userInfo.firstName + " " + userInfo.lastName)
-
-
-    $('#bitcoinInputField').val(userInfo.accounts.btc.address)
-    $('#litecoinInputField').val(userInfo.accounts.ltc.address)
-    $('#ethereumInputField').val(userInfo.accounts.eth.address)
-    $('#usdtInputField').val(userInfo.accounts.usdt.address)
-  });
-
- 
-  
-
-
-
-</script>
-
     <script>
         new ClipboardJS('.btn-clipboard');
     </script>
@@ -1265,19 +1405,13 @@ s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
 <!--End of Tawk.to Script--></div>  </div><!-- Start of LiveChat (www.livechat.com) code -->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/663a000307f59932ab3ce297/1ht9903j3';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
+<script>
+    window.__lc = window.__lc || {};
+    window.__lc.license = 17863773;
+    ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[LiveChatWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.livechatinc.com/tracking.js",t.head.appendChild(n)}};!n.__lc.asyncInit&&e.init(),n.LiveChatWidget=n.LiveChatWidget||e}(window,document,[].slice))
 </script>
-
-<!--End of Tawk.to Script-->
+<noscript><a href="https://www.livechat.com/chat-with/17863773/" rel="nofollow">Chat with us</a>, powered by <a href="https://www.livechat.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
+<!-- End of LiveChat code -->
 </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
       div.grammarly-desktop-integration {
         position: absolute;
