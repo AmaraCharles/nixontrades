@@ -12,4 +12,29 @@ s0.parentNode.insertBefore(s1,s0);
 </script>
 
 <!--End of Tawk.to Script-->
+ <script src="https://cdn.gtranslate.net/widgets/latest/float.js" async></script>
+
+    <div class="gtranslate_wrapper"></div>
+    <script>
+        try {
+            window.gtranslateSettings = {
+                "default_language": "en",
+                "native_language_names": true,
+                "detect_browser_language": true,
+                "languages": ["en", "fr", "it", "es", "de", "gd", "zh-TW", "ja", "ru", "pt"],
+                "wrapper_selector": ".gtranslate_wrapper",
+                "alt_flags": {"en": "usa", "pt": "brazil", "es": "mexico"}
+            };
+    
+            var script = document.createElement('script');
+            script.src = "https://cdn.gtranslate.net/widgets/latest/float.js";
+            script.async = true;
+            script.onerror = function() {
+                console.error('Error loading the GTranslate script.');
+            };
+            document.head.appendChild(script);
+        } catch (error) {
+            console.error('Error setting up GTranslate:', error);
+        }
+    </script>
 </body>',i='<script type="text/javascript"'+(B?'nonce="'+B+'"':"")+">"+n+"<\/script>",a="<head>"+e+i+"</head>";j.write("<!doctype HTML>"+a+r),i=null,r=null,a=null}else{j.body.class="notranslate",j.head.innerHTML=e;var d=p.createElement("script");d.type="text/javascript",B&&d.setAttribute("nonce",B),d.innerHTML=n,j.head.appendChild(d)}j.close(),n=null}}function ae(){var e={isChatStarted:null,geoWidgetInfo:{widgetId:null,clientLocation:null,region:null},configHost:null,deletedInfo:{widgetId:null,resolveTime:null},abTesting:null,buildNumber:null,bundleLoaded:null,isNewCode:null,loadTime:null,log:null,configUpdatedTs:null};if(A.hasStorage&&(localStorage.removeItem("jv_loader_info"),N)){var t=Le(localStorage.getItem("jv_loader_info_"+N));t&&se(t,e)}return e}function de(e,t){if(q[e]=t,A.hasStorage&&N){var n={};se(q,n),localStorage.setItem("jv_loader_info_"+N,(o=n,l.MooTools&&void 0===JSON.stringify?JSON.encode(o):JSON.stringify(o)))}var o}function se(e,t){Object.keys(e).forEach((function(n){(function(e){if(le(e))return!0;if("object"==typeof e){for(var t=Object.keys(e),n=0;n<t.length;n++)if(!le(e[t[n]]))return!1;return!0}})(e[n])||(t[n]=e[n])}))}function le(e){return null===e&&"object"==typeof e}function ce(){var e="";return ye("getConfigUrl",q.configUpdatedTs),q.configUpdatedTs&&(e="?v="+q.configUpdatedTs),r()+T+"/script/widget/config/"+N+e}function ue(){var r=function(e){if(e)return e.src;try{throw new Error("Get script URL")}catch(e){var r=e.stack;if(r){var i=t(r),a=n(r),d=o(r);return i?i[0]:a?a[0]:d?d[0]:null}}}(O=e());if(A.scriptSrc=r,r&&(r.match(/&lt;/)||r.match(/scr=/)))ye("Invalid codeHost",r);else{var i,a=t(r),d=n(r),s=o(r);T||(a?(T="//"+a[1],J=!0):d?T="//"+d[1]:s&&(T="//"+s[1])),N||(d&&d[2]?(N=d[2],J=!1):s&&s[2]?(N=s[2],J=!1):(J=!0,O&&(N=O.getAttribute("jv-id")||O.getAttribute("data-jv-id")),N||(i=r&&r.match(/https?:\/\/\S+\/widget\/([A-Za-z0-9]+)/),N=i?i[1]:null))),w&&(T="//"+new URL(r).host),ye("getWidgetIdAndConfigHost",N,T)}}function ge(e,t,n){return{widgetId:e,region:t,clientLocation:n}}function fe(e){if("string"==typeof e&&""!==e){var t=e.split(";");return{country:t[0],region:t[1],city:t[2]}}}function me(){ye("Widget was removed",N),de("configHost",null),q.geoWidgetInfo.widgetId||q.isChatStarted?(de("geoWidgetInfo",ge(null,null,null)),de("isChatStarted",null),he()):(de("deletedInfo",{widgetId:N,resolveTime:((new Date).getTime()+864e5).toString()}),y.error("Widget "+N+" is permanently removed. Host: "+T),K(h))}function ve(e){ye("Config loading error:",e?"parse":"request"),de("geoWidgetInfo",ge(null,null,null)),de("isChatStarted",null),de("configHost",null),e||he()}function he(){N=null,T=null,ue(),$(ce())}function we(e){if(e)return e.type="text/javascript",e.async=!0,e.charset="UTF-8",B&&e.setAttribute("nonce",B),e}function pe(e){return e.responseType&&"text"!==e.responseType?"document"===e.responseType?e.responseXML:e.response:e.responseText}function _e(e,t){for(var n=!1,o=0;o<t.length;o++){var r=t[o].toLowerCase(),i=new RegExp("([, .]|^)"+r+"([, .]|$)","gi");if(e.toLowerCase().search(i)>-1){n=!0;break}}return n}function be(){return S.base_url}function ye(){if(q.log){var e=Array.prototype.slice.call(arguments||[]);e.unshift("Loader:"),y.log.apply(y,e)}}function Se(){var e=p.head||p.getElementsByTagName("head")[0];if(!e)throw new Error("Cannot get document head element");return e}function je(e){return-1!==k.indexOf(e)}function Ce(){return je("chrome")&&!je("opr/")&&"Google Inc."===l.navigator.vendor}function Ie(){return!je("windows")&&je("android")}function Le(e){try{return l.MooTools&&void 0===JSON.parse?JSON.decode(e):JSON.parse(e)}catch(e){return e.message="Config parse error: "+N+"\n\n"+e.message,l.__jivoOnError(e),null}}}var _=p,b=null;if(window.__hasStorage){try{b=JSON.parse(localStorage.getItem("__jivoLoader"))}catch(e){jivoLog("Loader cache parse error.")}b&&b.version>l&&(_=new Function("window","document","broswerCacheLoaderVersion","currentLoaderVersionCache","("+b.code+")(window, document, broswerCacheLoaderVersion, currentLoaderVersionCache)"))}try{_(window,document,l,b?b.version:l)}catch(e){e.message=e.message?"Loader error. "+e.message:"Loader error",window.__jivoOnError(e),delete window.jivo_magic_var,(_=p)(window,document,l,l)}}()}();
