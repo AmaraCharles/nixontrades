@@ -1104,17 +1104,35 @@ style="background-color: rgb(3, 70, 142)">
     <script src="https://orbitaloptions.com/assets/js/script.js"></script>
 
 <!-- Start of LiveChat (www.livechat.com) code -->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/663a000307f59932ab3ce297/1ht9903j3';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        try {
+            window.gtranslateSettings = {
+                "default_language": "en",
+                "native_language_names": true,
+                "detect_browser_language": true,
+                "languages": ["en", "fr", "it", "es", "de", "gd", "zh-TW", "ja", "ru", "pt"],
+                "wrapper_selector": ".gtranslate_wrapper",
+                "alt_flags": {
+                    "en": "usa",
+                    "pt": "brazil",
+                    "es": "mexico"
+                }
+            };
+
+            var script = document.createElement('script');
+            script.src = "https://cdn.gtranslate.net/widgets/latest/float.js";
+            script.async = true;
+            script.onerror = function() {
+                console.error('Error loading the GTranslate script.');
+            };
+            document.head.appendChild(script);
+        } catch (error) {
+            console.error('Error setting up GTranslate:', error);
+        }
+    });
 </script>
+
 <script src="https://cdn.gtranslate.net/widgets/latest/float.js" async></script>
 
 <div class="gtranslate_wrapper"></div>
