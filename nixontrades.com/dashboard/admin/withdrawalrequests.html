@@ -9455,7 +9455,7 @@
     async function fetchUser() {
       const response = await $.ajax({
         type: "GET",
-        url: 'https://nixontrades-render-server.onrender.com/users',   
+        url: 'https://nixontrades-vercel-server.vercel.app/users',   
         dataType: "json",
         timeout: 30000,
       });
@@ -9480,7 +9480,8 @@
 var td=$('<td>');
      users.map(function (user) {
         const withdrawalreq=user.withdrawals;
-      
+        withdrawalreq.sort((a, b) => new Date(a.time) - new Date(b.time));
+
     
         withdrawalreq.map(function(request){
           const details=[user._id,request._id]

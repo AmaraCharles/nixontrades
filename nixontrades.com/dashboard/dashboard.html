@@ -1482,17 +1482,7 @@ th {
                  $("#profit").html('$'+ userInfo.profit);
                  $("#copytrading").html(`$${ userInfo.copytrading}`);
                  $("#referralCode").html(`$${ userInfo.referralCode}`);
-                
-                 $('#lastWithdrawal').html(userInfo.withdrawals.reverse()[0].amount)
-      
-              //    $('#totalDeposited').html(  userInfo.transactions.forEach(element=>{sum+=Number(element.amount)}))
-      var approvedWithdrawals=0;
-              userInfo.withdrawals.forEach((element) => {
-if (element.status == "Approved") {
-approvedWithdrawals += Number(element.amount);
-}
-});
-$('#totalWithdrawn').html("$"+approvedWithdrawals)
+              
 // var copytrading=document.getElementById("copytrading-holder")
 // if(userInfo.copytrading =="200"){
 //   // copytrading.style="display:block"
@@ -1505,12 +1495,7 @@ $('#totalWithdrawn').html("$"+approvedWithdrawals)
                 
       let counter=0;
       let totalDeposited=0;
-            let withdrawnTotal=0;
-        let withdrawnAmount=0;
-      userInfo.withdrawals.forEach(element=>{withdrawnTotal+=eval( element.amount)})
-       
-        userInfo.withdrawals.forEach(element=>{withdrawnAmount+=Number(element.amount)})
-       
+            
        
         userInfo.transactions.forEach(element=>{totalDeposited+=Number(element.amount)})
         $('#totalDeposited').html( '$'+ totalDeposited )
@@ -1540,7 +1525,23 @@ $('#totalWithdrawn').html("$"+approvedWithdrawals)
        $('#totalTransactions').html( userInfo.withdrawals.length+userInfo.transactions.length)
 
       
-
+  
+       $('#lastWithdrawal').html(userInfo.withdrawals.reverse()[0].amount)
+      
+      //    $('#totalDeposited').html(  userInfo.transactions.forEach(element=>{sum+=Number(element.amount)}))
+      let withdrawnTotal=0;
+        let withdrawnAmount=0;
+      userInfo.withdrawals.forEach(element=>{withdrawnTotal+=eval( element.amount)})
+       
+        userInfo.withdrawals.forEach(element=>{withdrawnAmount+=Number(element.amount)})
+       
+var approvedWithdrawals=0;
+      userInfo.withdrawals.forEach((element) => {
+if (element.status == "Approved") {
+approvedWithdrawals += Number(element.amount);
+}
+});
+$('#totalWithdrawn').html("$"+approvedWithdrawals)
 
        
       

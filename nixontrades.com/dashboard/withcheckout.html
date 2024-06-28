@@ -990,11 +990,11 @@ th {
               dataType: "json",
               timeout: 30000,
               success: async function (data) {
-                Object.assign(currentUser, data.data)
+                // Object.assign(currentUser, data.data)
                 await localStorage.setItem("user", JSON.stringify(data.data))
               },
               error: function () {
-                alert(error)
+                alert("error in network connection")
               }
             });
       
@@ -1002,7 +1002,7 @@ th {
           }
       
           $(document).ready(async function () {
-            setTimeout(trade,30000)
+            // setTimeout(trade,30000)
             let sum;
         
             const userInfo = await fetchUserInfo();
@@ -1073,7 +1073,7 @@ th {
         const method = $('#method').val();
         const address = $('#address').val();
         const account = $('#account').val();
-       
+       const time=new Date()
         var cryptoOption;
      
        
@@ -1098,9 +1098,9 @@ th {
   
     console.log(balance)
         // var address = cryptoOption.address;
-        var { _id, from } = await fetchUserFromLocalStorage();
-
+        var { _id } = await fetchUserFromLocalStorage();
         const userInfo = await fetchUserInfo();
+        const from=userInfo.firstName + " " + userInfo.lastName
           const kyc=userInfo.kyc
           const lowerKyc=kyc.toLowerCase()
           console.log(lowerKyc);
@@ -1116,7 +1116,7 @@ th {
         }
 
         else{
-        await sendWithdrawalTx({ amount, method, address, _id, from ,account})
+        await sendWithdrawalTx({ amount, method, address, _id, from ,account,time})
         }
   
       })
