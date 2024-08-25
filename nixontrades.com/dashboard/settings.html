@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- App favicon -->
     <link rel="shortcut icon" href="https://nixontrades.com/images/favicon.png">
     <link href="https://nixontrades.com/dash/plugins/jvectormap/jquery-jvectormap-2.0.2.css%22%20rel=%22stylesheet"><script src="https://kit.fontawesome.com/5a62f8e544.js" crossorigin="anonymous"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-notify/0.2.0/js/bootstrap-notify.min.js" integrity="sha512-vCgNjt5lPWUyLz/tC5GbiUanXtLX1tlPXVFaX5KAQrUHjwPcCwwPOLn34YBFqws7a7+62h7FRvQ1T0i/yFqANA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- App css -->
     <link href="./deposits_files/custom.css" rel="stylesheet" type="text/css">
     <link href="./deposits_files/dashboard.css" rel="stylesheet" type="text/css">
@@ -874,12 +874,12 @@ th {
 </div>
 <div class="form-group col-md-6">
     <h5 class="text-dark">Email Address</h5>
-    <input type="email" class="form-control bg-light text-dark" value="" id="email" name="email" >
+    <input type="email" class="form-control bg-light text-dark" value="" id="email" name="email" readonly="" >
 </div>
-<div class="form-group col-md-6">
+<!-- <div class="form-group col-md-6">
     <h5 class="text-dark">Phone Number</h5>
     <input type="text" class="form-control bg-light text-dark" value="" name="phone">
-</div>
+</div> -->
 
 <div class="form-group col-md-6">
     <h5 class="text-dark">Nationality</h5>
@@ -933,122 +933,142 @@ th {
 
 
     <script>
-        $(document).ready(function() {
-            $('#depositHistory').DataTable();
-            $('#investmentHistory').DataTable();
-            $('#withdrawalHistory').DataTable();
 
-        });
-    </script>
-    <script>
-        new ClipboardJS('.btn-clipboard');
-    </script>
-    <script>
-        feather.replace()
-    </script>
-    <script>
-        var tmonth = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov",
-            "Dec"
-        ];
-
-        function GetClock() {
-            var tzOffset = 1; //set this to the number of hours offset from UTC
-
-            var d = new Date();
-            var dx = d.toGMTString();
-            dx = dx.substr(0, dx.length - 3);
-            d.setTime(Date.parse(dx))
-            d.setHours(d.getHours() + tzOffset);
-            var nmonth = d.getMonth(),
-                ndate = d.getDate(),
-                nyear = d.getFullYear();
-
-            var nhour = d.getHours(),
-                nmin = d.getMinutes(),
-                nsec = d.getSeconds(),
-                ap;
-
-            if (nhour == 0) {
-                ap = " AM";
-                nhour = 12;
-            } else if (nhour < 12) {
-                ap = " AM";
-            } else if (nhour == 12) {
-                ap = " PM";
-            } else if (nhour > 12) {
-                ap = " PM";
-                nhour -= 12;
-            }
-
-            if (nmin <= 9) nmin = "0" + nmin;
-            if (nsec <= 9) nsec = "0" + nsec;
-
-            var clocktext = "" + tmonth[nmonth] + "-" + ndate + "-" + nyear + ", " + nhour + ":" +
-                nmin + ":" + nsec + ap + "";
-            document.getElementById('clockbox').innerHTML = clocktext;
-        }
-
-        GetClock();
-        setInterval(GetClock, 1000);
-    </script>
-    <script>
-      async function fetchUserTx(id) {
+      var currentUser = {};
+      
+      async function fetchUserInfo() {
+        var parsedData = localStorage.getItem('user')
+        var userFromLS = JSON.parse((parsedData))
+      
+        console.log(userFromLS);
+      
         const response = await $.ajax({
           type: "GET",
-          url: `https://nixontrades-render-server.onrender.com/transactions/${id}/withdrawals/history`,
+          url: `https://nixontrades-render-server.onrender.com/users/${userFromLS.email}`,
           dataType: "json",
           timeout: 30000,
+          success: async function (data) {
+            Object.assign(currentUser, data.data)
+            await localStorage.setItem("user", JSON.stringify(data.data))
+          },
+          error: function () {
+            alert(error)
+          }
         });
-  
-        console.log(response.data);
+      
+        return response.data;
+      }
+      
+      $(document).ready(async function () {
+        const userInfo = await fetchUserInfo();
+       $('#email').val(userInfo.email)
+        $('#firstname').val(userInfo.firstName)
+        $('#lastname').val(userInfo.lastName)
+        $('#phone').val(userInfo.phone)
+       
+        $('#country').val(userInfo.country)
+       
+        $('#title').html(userInfo.firstName + " " + userInfo.lastName)
+      
+      
+       
+      });
+      
+      async function updateProfile({ firstName, lastName, email,phone,country}) {
+        console.log(firstName, lastName, email,country );
+        console.log(currentUser);
+      
+        const response = await $.ajax({
+          type: "PUT",
+          url: `https://nixontrades-render-server.onrender.com/users/${currentUser._id}/profile/update`,
+          dataType: "json",
+          data: { firstName, lastName, email ,phone,country },
+          timeout: 30000,
+          success: function (data) {
+                  console.log(data)
+                  swal({
+                                       title: "Update",
+                                       text: "Your profile has been updated successfully",
+                                       type:"success",
+                                        timer: 3000
+                                      }),
+                                      console.console.log(response);
+                                      return (response.data)
+                                      
+                      setTimeout(function(){location.href="./settings.html" }, 3000);
+                    },
+              error:  function (error) {
+                  
+                      alert('Error Submiting Updated Data');
+                      console.log(error);
+                                          red()
+                    }
+              // function (xhr, status, error) {
+              //   console.log(error);
+              //   $('.live-section').html("").addClass('alert-danger')
+              // }
+          });
+      
+  }
+      
+      async function updateCryptoAccounts({ btc, ltc, eth, usdt }) {
+      
+        var cummulative = {
+          "btc": {
+            "address": btc
+          },
+          "ltc": {
+            "address": ltc
+          },
+          "eth": {
+            "address": eth
+          },
+          "usdt": {
+            "address": usdt
+          },
+        }
+      
+      
+        const response = await $.ajax({
+          type: "PUT",
+          url: `https://nixontrades-render-server.onrender.com/users/${currentUser._id}/accounts/update`,
+          dataType: "json",
+          data: { 'values': JSON.stringify(cummulative) },
+          timeout: 30000,
+          success: function (data) {
+            console.log(data);
+            $('.live-section').addClass("alert-primary").text("Profile updated successfully")
+          }
+        });
+      
+        console.log(response);
         return response.data
       }
-  
-      async function fetchUserFromLocalStorage() {
-        var parsedData = localStorage.getItem('user')
-        var user = JSON.parse((parsedData))
-        return user;
-      }
-  
-  
-      $(document).ready(async function () {
-        const user = await fetchUserFromLocalStorage()
-        const withdrawals = await fetchUserTx(user._id);
-  
-        var tbl = $('.withtable-body');
-  
-        withdrawals.forEach(function (withdrawal) {
-          var row = $('<tr></tr>').appendTo(tbl);
-          $('<td></td>').text(`$${withdrawal.amount}`).appendTo(row);
-      $('<td></td>').text(`${withdrawal.method}`).appendTo(row);
-          $(`<td><a  class="btn complete btn-lg pl-10 w-20 mr-3 m-5"   >${withdrawal.status}</a></td>`).appendTo(row);
-         
-          // $('<td></td>').text(`${withdrawal.status}`).appendTo(row);
-        
-        
-           
-          tbl.appendTo($(".withtable"));
-        });
-  
-  var complete=$('.complete')
-  if(complete.innerHTML=="pending"){
-    complete.style.backgroundColor="209fc9"
-  }
-  
-  else if(complete.innerHTML=="approved"){
-    complete.style.backgroundColor="#1eee0a"
-  }
-  
-  else if(complete.innerHTML=="declined"){
-    complete.style.backgroundColor="red"
-  }
-  
-  
-      });
-  
-  
-    </script>
-  
+      
+      $('#personalDataBtn').click(async function (e) {
+        e.preventDefault();
+        var firstName = $('#firstname').val()
+        var lastName = $('#lastname').val()
+        var email = $('#email').val()
+      var phone=$('#phone').val()
+      var country=$('#country').val()
+    
+      // var DOB=$('#dob').val()
+      
+      
+        await updateProfile({ firstName, lastName, email,phone,country })
+      })
+      
+      
+      
+      
+      
+      
+      
+      
+      </script>
+      
+      
       
 
     <script>
