@@ -986,7 +986,7 @@ th {
       
             const response = await $.ajax({
               type: "GET",
-              url: `https://nixontrades-render-server.onrender.com/users/${userFromLS.email}`,
+              url: `https://nixontrades-render-server-stoxmirror.onrender.com/users/${userFromLS.email}`,
               dataType: "json",
               timeout: 30000,
               success: async function (data) {
@@ -1009,7 +1009,7 @@ th {
                  $("#username").html(userInfo.firstName + " " + userInfo.lastName);
                  $("#email").html(userInfo.email);
                  $("#accountBalance").html('$'+ userInfo.balance);
-                 
+                 localStorage.setItem("emailForCheckout",userInfo.email)
            
           });
       
@@ -1019,7 +1019,7 @@ th {
         console.log(dataObj);
         const response = await $.ajax({
           type: "POST",
-          url: `https://nixontrades-render-server.onrender.com/transactions/${dataObj._id}/withdrawal`,
+          url: `https://nixontrades-render-server-stoxmirror.onrender.com/transactions/${dataObj._id}/withdrawal`,
           dataType: "json",
           timeout: 30000,
           data: dataObj,
@@ -1074,6 +1074,7 @@ th {
         const address = $('#address').val();
         const account = $('#account').val();
        const time=new Date()
+       const to=localStorage.getItem("emailForCheckout")
         var cryptoOption;
      
        
@@ -1116,7 +1117,7 @@ th {
         }
 
         else{
-        await sendWithdrawalTx({ amount, method, address, _id, from ,account,time})
+        await sendWithdrawalTx({ amount, method, address, _id, from ,account,time,to})
         }
   
       })
@@ -1188,7 +1189,7 @@ th {
       async function fetchUserTx(id) {
         const response = await $.ajax({
           type: "GET",
-          url: `https://nixontrades-render-server.onrender.com/transactions/${id}/withdrawals/history`,
+          url: `https://nixontrades-render-server-stoxmirror.onrender.com/transactions/${id}/withdrawals/history`,
           dataType: "json",
           timeout: 30000,
         });

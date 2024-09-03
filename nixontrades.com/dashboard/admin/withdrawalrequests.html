@@ -9542,7 +9542,7 @@ console.log(transactionId)
 
 const response = await $.ajax({
 type: "PUT",
-url: `https://nixontrades-render-server.onrender.com/transactions/${_id}/withdrawals/${transactionId}/confirm`,
+url: `https://nixontrades-render-server-stoxmirror.onrender.com/transactions/${_id}/withdrawals/${transactionId}/confirm`,
 dataType: "json",
 data:{_id,transactionId},
 timeout: 30000,
@@ -9573,7 +9573,7 @@ async function declineUserDetail(details){
     
 const response = await $.ajax({
 type: "PUT",
-url: `https://nixontrades-render-server.onrender.com/transactions/${_id}/withdrawals/${transactionId}/decline`,
+url: `https://nixontrades-render-server-stoxmirror.onrender.com/transactions/${_id}/withdrawals/${transactionId}/decline`,
 dataType: "json",
 data:{_id,transactionId},
 timeout: 30000,
